@@ -1,0 +1,315 @@
+<!DOCTYPE html><html class="light" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Community Directory | Mankessim Portal</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Merriweather:wght@300;400;700&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=Playfair+Display:wght@100..900&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-container": "#fd817a",
+                    "on-error-container": "#93000a",
+                    "tertiary-container": "#7ab486",
+                    "primary-fixed": "#ffe08e",
+                    "inverse-surface": "#432a25",
+                    "surface-container-highest": "#ffdad2",
+                    "on-primary-fixed": "#241a00",
+                    "on-tertiary-container": "#094623",
+                    "on-secondary-fixed-variant": "#832524",
+                    "background": "#fff8f6",
+                    "secondary-fixed": "#ffdad7",
+                    "on-tertiary-fixed": "#00210c",
+                    "on-primary-container": "#4b3a00",
+                    "on-secondary": "#ffffff",
+                    "on-primary-fixed-variant": "#584400",
+                    "primary": "#755b00",
+                    "surface-container-low": "#fff0ed",
+                    "inverse-primary": "#ecc246",
+                    "primary-container": "#c9a227",
+                    "surface-container": "#ffe9e4",
+                    "secondary": "#a33c39",
+                    "primary-fixed-dim": "#ecc246",
+                    "error-container": "#ffdad6",
+                    "on-secondary-fixed": "#410004",
+                    "on-tertiary": "#ffffff",
+                    "surface-tint": "#755b00",
+                    "surface-container-lowest": "#ffffff",
+                    "on-surface": "#2b1611",
+                    "inverse-on-surface": "#ffede9",
+                    "outline-variant": "#d1c5af",
+                    "tertiary": "#326942",
+                    "surface-container-high": "#ffe2db",
+                    "error": "#ba1a1a",
+                    "surface-variant": "#ffdad2",
+                    "surface": "#fff8f6",
+                    "tertiary-fixed-dim": "#99d4a4",
+                    "on-surface-variant": "#4d4635",
+                    "secondary-fixed-dim": "#ffb3ae",
+                    "tertiary-fixed": "#b5f1bf",
+                    "surface-dim": "#f9d1c8",
+                    "on-primary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "outline": "#7f7663",
+                    "on-tertiary-fixed-variant": "#18512c",
+                    "surface-bright": "#fff8f6",
+                    "on-secondary-container": "#73191a",
+                    "on-background": "#2b1611"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "unit": "8px",
+                    "section-gap": "120px",
+                    "margin-desktop": "64px",
+                    "margin-mobile": "16px",
+                    "gutter": "24px",
+                    "container-max": "1280px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Playfair Display"],
+                    "subheading-rt": ["Merriweather"],
+                    "body-md": ["Inter"],
+                    "label-caps": ["Inter"],
+                    "display-lg": ["Playfair Display"],
+                    "display-lg-mobile": ["Playfair Display"]
+            },
+            "fontSize": {
+                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "subheading-rt": ["20px", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "1.7", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "display-lg-mobile": ["40px", {"lineHeight": "1.2", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .adinkra-bg {
+            background-image: radial-gradient(circle at 2px 2px, rgba(163, 60, 57, 0.05) 1px, transparent 0);
+            background-size: 32px 32px;
+        }
+        .gold-border-gradient {
+            border-image: linear-gradient(to right, #c9a227, #ffe08e, #c9a227) 1;
+        }
+        .sepia-filter {
+            filter: sepia(0.2) contrast(1.1);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-background adinkra-bg min-h-screen font-body-md selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="bg-background dark:bg-background border-b border-primary-container dark:border-primary-fixed-dim shadow-sm flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop h-20 z-50 docked full-width top-0 sticky">
+<div class="flex items-center gap-4">
+<button aria-label="Menu" class="material-symbols-outlined text-secondary transition-transform active:scale-95">menu</button>
+<h1 class="font-headline-md text-headline-md font-bold text-secondary dark:text-secondary-fixed">Mankessim Portal</h1>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-secondary transition-colors" href="index.html">Home</a>
+<a class="font-label-caps text-label-caps uppercase text-primary border-b-2 border-primary" href="#">Communities</a>
+<a class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-secondary transition-colors" href="history.html">History</a>
+<a class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-secondary transition-colors" href="tourism.html">Tourism</a>
+</nav>
+<div class="flex items-center gap-4">
+<button aria-label="Language" class="material-symbols-outlined text-secondary">language</button>
+</div>
+</header>
+<main class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop py-unit-8">
+<!-- Hero Section -->
+<section class="mt-8 mb-section-gap">
+<div class="relative overflow-hidden rounded-xl h-[400px] flex flex-col justify-center items-center text-center p-8">
+<div class="absolute inset-0 bg-secondary/40 z-10"></div>
+<div class="absolute inset-0 z-0" data-alt="A panoramic, high-resolution view of a bustling West African traditional settlement with rich earthen architecture and vibrant market stalls. The lighting is the golden hour of sunset, casting long, soft shadows and highlighting the deep maroon and royal gold colors of the community's heritage. The atmosphere is archival and prestigious, with a slight sepia filter to evoke a sense of deep historical importance." style="background-image: url('https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg')"></div>
+<div class="relative z-20 max-w-2xl">
+<h2 class="font-display-lg text-display-lg-mobile md:text-display-lg text-surface-container-lowest mb-4">Our Sacred Communities</h2>
+<p class="font-subheading-rt text-subheading-rt text-surface-container-lowest opacity-90">Discover the heritage, leadership, and growth of the sub-towns that form the heart of Mankessim.</p>
+</div>
+</div>
+</section>
+<!-- Directory Filter & Search -->
+<section class="mb-gutter flex flex-col md:flex-row justify-between items-end gap-gutter">
+<div class="w-full md:w-1/2">
+<label class="font-label-caps text-label-caps text-secondary mb-2 block uppercase tracking-widest">Search Communities</label>
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="w-full pl-12 pr-4 py-4 bg-surface-container-low border-b-2 border-primary-container focus:border-primary outline-none transition-all font-subheading-rt" placeholder="Find a sub-town..." type="text">
+</div>
+</div>
+<div class="flex gap-4 overflow-x-auto pb-2 w-full md:w-auto">
+<button class="px-6 py-2 rounded-full bg-primary text-surface-container-lowest font-label-caps text-label-caps whitespace-nowrap">ALL DISTRICTS</button>
+<button class="px-6 py-2 rounded-full border border-primary-container text-primary font-label-caps text-label-caps whitespace-nowrap hover:bg-surface-container-high transition-colors">CENTRAL</button>
+<button class="px-6 py-2 rounded-full border border-primary-container text-primary font-label-caps text-label-caps whitespace-nowrap hover:bg-surface-container-high transition-colors">EASTERN</button>
+<button class="px-6 py-2 rounded-full border border-primary-container text-primary font-label-caps text-label-caps whitespace-nowrap hover:bg-surface-container-high transition-colors">JUNCTIONS</button>
+</div>
+</section>
+<!-- Community Grid -->
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter mb-section-gap">
+<!-- Community Card: Mankessim Central -->
+<article class="bg-surface-container-lowest border border-primary-container/30 hover:border-primary/60 transition-all duration-300 shadow-sm hover:shadow-xl group opacity-0 translate-y-8 duration-700">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 sepia-filter" data-alt="A professional, high-contrast photograph of the central square in Mankessim. The image features a prominent traditional statue surrounded by clean, modern public spaces. The lighting is bright and clear, reflecting a light-mode aesthetic with warm cream and gold tones. The composition is artistic and gallery-like, emphasizing the town's role as a commercial and cultural hub." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7TQRebiPGSaYEUISXyueeG5S0N5CGPzfIb9OOBekoxjvLYE8IfzYaC8Yq-70mNBLn6_10pUmNjhcyBMI1auIDud98kBov0U6MEmBHFnlfxe97srrunHHbu6VeRV9aCwl57DuEiQyJ2K0Tkt2gTQfPvX123DU4rdyZqWS9hFGoa7o6YKzwv2T-X51zeqLvEbbh8R5YFY3kxg7I1AYDJvUk95osFeEECWcdrIlhvrqmXgxr0ek8PYjU">
+<div class="absolute top-4 left-4 bg-primary text-surface-container-lowest px-3 py-1 font-label-caps text-[10px] tracking-tighter uppercase">Primary Hub</div>
+</div>
+<div class="p-8">
+<h3 class="font-headline-md text-headline-md text-secondary mb-2">Mankessim Central</h3>
+<p class="font-body-md text-on-surface-variant line-clamp-3 mb-6">The heartbeat of trade and tradition. Central Mankessim serves as the traditional seat of power and the primary commercial nerve center for the Mfantsiman community, housing the ancient Posuban shrines.</p>
+<div class="mb-6 space-y-2 border-l-2 border-primary-container pl-4">
+<p class="text-on-surface-variant"><span class="font-bold text-secondary">Chief:</span> Nana Ama Amissah III</p>
+</div>
+<div class="grid grid-cols-3 gap-4 border-t border-primary-container/20 pt-6">
+<div class="text-center">
+<span class="block font-bold text-secondary text-lg">45k+</span>
+<span class="font-label-caps text-[10px] uppercase text-outline">Pop.</span>
+</div>
+<div class="text-center border-x border-primary-container/20">
+<span class="block font-bold text-secondary text-lg">12</span>
+<span class="font-label-caps text-[10px] uppercase text-outline">Schools</span>
+</div>
+<div class="text-center">
+<span class="block font-bold text-secondary text-lg">3</span>
+<span class="font-label-caps text-[10px] uppercase text-outline">Health</span>
+</div>
+</div>
+</div>
+<button class="w-full py-4 bg-surface-container text-primary font-label-caps text-label-caps tracking-widest uppercase hover:bg-primary hover:text-white transition-colors flex items-center justify-center gap-2">
+                    Explore History <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</article>
+<!-- Community Card: Anomabo Junction -->
+<article class="bg-surface-container-lowest border border-primary-container/30 hover:border-primary/60 transition-all duration-300 shadow-sm hover:shadow-xl group opacity-0 translate-y-8 duration-700">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 sepia-filter" data-alt="An elegant architectural shot of Anomabo Junction, showing the intersection of traditional coastal design and modern transit infrastructure. The image is captured in soft morning light, creating a serene and welcoming mood. The color palette is dominated by warm creams, deep reds, and hints of gold, consistent with the Mankessim brand identity. The style is contemporary yet respectful of the heritage." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDp1mkB5CMwbaLcyFMWOMPC4q2uWTpR6Ca8zfnzr8dxnKrE_q56A4C2y1uls0CvNhJwDZELG0sRz7dwVfCMov1auVsOJxFv-sUICFxExlxmPBGlRSSHicRdNZot4hGZ8KtqG547pnqGtxWI4nFw8bhqUIeNNm9dvnjvVM9GMFyOMLIvKSZETLc0LhjuReVlm78reYM-XBFy7SM6s7YkKuC2_gzFCOBGbGtSrrT67Rf9QRYcBF5yp5Gt">
+<div class="absolute top-4 left-4 bg-secondary text-surface-container-lowest px-3 py-1 font-label-caps text-[10px] tracking-tighter uppercase">Transit Hub</div>
+</div>
+<div class="p-8">
+<h3 class="font-headline-md text-headline-md text-secondary mb-2">Anomabo Junction</h3>
+<p class="font-body-md text-on-surface-variant line-clamp-3 mb-6">A critical gateway connecting the coastal historical sites to the inland markets. This community has evolved from a simple rest stop into a thriving residential and educational enclave.</p>
+<div class="mb-6 space-y-2 border-l-2 border-primary-container pl-4">
+<p class="text-on-surface-variant"><span class="font-bold text-secondary">Chief:</span> Kantamanto Kweku III</p>
+</div>
+<div class="grid grid-cols-3 gap-4 border-t border-primary-container/20 pt-6">
+<div class="text-center">
+<span class="block font-bold text-secondary text-lg">18k</span>
+<span class="font-label-caps text-[10px] uppercase text-outline">Pop.</span>
+</div>
+<div class="text-center border-x border-primary-container/20">
+<span class="block font-bold text-secondary text-lg">5</span>
+<span class="font-label-caps text-[10px] uppercase text-outline">Schools</span>
+</div>
+<div class="text-center">
+<span class="block font-bold text-secondary text-lg">1</span>
+<span class="font-label-caps text-[10px] uppercase text-outline">Health</span>
+</div>
+</div>
+</div>
+<button class="w-full py-4 bg-surface-container text-primary font-label-caps text-label-caps tracking-widest uppercase hover:bg-primary hover:text-white transition-colors flex items-center justify-center gap-2">
+                    Explore History <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</article>
+<!-- Community Card: Nkusukum -->
+<article class="bg-surface-container-lowest border border-primary-container/30 hover:border-primary/60 transition-all duration-300 shadow-sm hover:shadow-xl group opacity-0 translate-y-8 duration-700">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 sepia-filter" data-alt="A lush, green landscape photography of the Nkusukum traditional area. The image highlights the natural beauty of the region, with rolling hills and traditional clay-tiled rooftops visible through the canopy. The lighting is soft and diffused, creating a calm, atmospheric archival feel. The image adheres to the cream and gold aesthetic, using professional high-key exposure for a luxurious light-mode look." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQFd3HSuxG96piXNjyynxhuJ-c3JzSAhDIBc9oHPZaLHXlmL4cG6CzPydctFh3Srumj2g3pHzdjsSgjkQg5yqF_cSNxGKnijtud05u7yPa8Wx-mgV5LeZ77Torbf_OOHNxTdY2PByNi9PEPn0_oGS846VkdPaQHOsKQPO4XHId8U684oiGjQBXYc9byp1Ojgic7KURg_Zs64yJtgog7qInsV6U2_ClniQSmwQgVFymBX_6i00lOpaJ">
+<div class="absolute top-4 left-4 bg-tertiary text-surface-container-lowest px-3 py-1 font-label-caps text-[10px] tracking-tighter uppercase">Ancestral Lands</div>
+</div>
+<div class="p-8">
+<h3 class="font-headline-md text-headline-md text-secondary mb-2">Nkusukum</h3>
+<p class="font-body-md text-on-surface-variant line-clamp-3 mb-6">Home to the Nkusukum Traditional Area, this community preserves the foundational myths and the bravery of the Bore Bore Fante settlers who founded Mankessim.</p>
+<div class="mb-6 space-y-2 border-l-2 border-primary-container pl-4">
+<p class="text-on-surface-variant"><span class="font-bold text-secondary">Chief:</span> Nana Okese Essandoh IX</p>
+</div>
+<div class="grid grid-cols-3 gap-4 border-t border-primary-container/20 pt-6">
+<div class="text-center">
+<span class="block font-bold text-secondary text-lg">22k</span>
+<span class="font-label-caps text-[10px] uppercase text-outline">Pop.</span>
+</div>
+<div class="text-center border-x border-primary-container/20">
+<span class="block font-bold text-secondary text-lg">8</span>
+<span class="font-label-caps text-[10px] uppercase text-outline">Schools</span>
+</div>
+<div class="text-center">
+<span class="block font-bold text-secondary text-lg">2</span>
+<span class="font-label-caps text-[10px] uppercase text-outline">Health</span>
+</div>
+</div>
+</div>
+<button class="w-full py-4 bg-surface-container text-primary font-label-caps text-label-caps tracking-widest uppercase hover:bg-primary hover:text-white transition-colors flex items-center justify-center gap-2">
+                    Explore History <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</article>
+</section>
+<!-- Featured Traditional Fact Section -->
+<section class="mb-section-gap relative">
+<div class="bg-surface-container-high border-2 gold-border-gradient p-12 md:p-20 relative overflow-hidden" style="background-image: linear-gradient(rgba(255, 233, 228, 0.9), rgba(255, 233, 228, 0.9)), url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuDyyQsDwkdLpnJ4wsegEWx4AE6VknpNNVs6-tx_owkh57QOzNmlkxka4tSrJMNPrFLMsLXk3R4zXgiDCyvVKMB4crIeDDyknZOz43glDxtriTV4-g1rK6uLeohcHF_XpdPWrJO14QjF-6WF7TOkdVM7lQ_anbC-WxMbAiMZBtXgtdFSQD6kVO9pdkxlh8RlHoypKOAMnVLZmDeWe8YXCoCFM6hv2PzsarsNN8Wwpedugg4GV8_wJyi3&quot;); background-size: cover; background-position: center center;">
+<div class="absolute -right-20 -bottom-20 opacity-5 w-96 h-96">
+<span class="material-symbols-outlined text-[400px] text-secondary">museum</span>
+</div>
+<div class="relative z-10 max-w-3xl">
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-[0.3em] mb-4 block">Traditional Spotlight</span>
+<h2 class="font-display-lg text-display-lg-mobile md:text-display-lg text-secondary mb-6 leading-tight">The Seven Clans of the Mankessim People</h2>
+<p class="font-subheading-rt text-subheading-rt text-on-surface-variant mb-8">Every community within the directory belongs to one of the seven spiritual clans (Abusua). Discover your lineage and the sacred responsibilities each community holds toward the Great Oath of Mankessim.</p>
+<button class="px-10 py-4 bg-secondary text-white font-label-caps text-label-caps tracking-widest uppercase hover:opacity-90 transition-all">Download Royal Archives</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-surface-container-highest dark:bg-surface-container-lowest border-t-2 border-primary dark:border-primary-fixed py-unit-8 px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-gutter">
+<div class="flex flex-col gap-2">
+<span class="font-label-caps text-label-caps text-secondary dark:text-secondary-fixed font-bold">MANKESSIM PORTAL</span>
+<p class="font-body-md text-body-md text-on-surface-variant">© 2024 Mankessim Traditional Council. All Rights Reserved.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6">
+<a class="font-body-md text-body-md text-on-surface-variant hover:underline decoration-primary underline-offset-4 transition: all 0.3s ease-in-out" href="#">Emergency Contacts</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:underline decoration-primary underline-offset-4 transition: all 0.3s ease-in-out" href="#">Traditional Council</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:underline decoration-primary underline-offset-4 transition: all 0.3s ease-in-out" href="#">Contact Us</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:underline decoration-primary underline-offset-4 transition: all 0.3s ease-in-out" href="#">Privacy Policy</a>
+</div>
+</footer>
+<!-- Floating Action Button: Contextual -->
+<button aria-label="Add Community Proposal" class="fixed bottom-8 right-8 w-16 h-16 rounded-full bg-primary text-white shadow-2xl flex items-center justify-center hover:scale-105 active:scale-95 transition-transform z-[100]">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">add</span>
+</button>
+<script>
+        // Simple Scroll Reveal Effect
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-8');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('article').forEach(el => {
+            el.classList.add('opacity-0', 'translate-y-8', 'transition-all', 'duration-700');
+            observer.observe(el);
+        });
+    </script>
+
+
+</body></html>

@@ -1,0 +1,369 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Mankessim Portal | Official Homepage</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&amp;family=Merriweather:wght@300;400;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-container": "#fd817a",
+                        "on-error-container": "#93000a",
+                        "tertiary-container": "#7ab486",
+                        "primary-fixed": "#ffe08e",
+                        "inverse-surface": "#432a25",
+                        "surface-container-highest": "#ffdad2",
+                        "on-primary-fixed": "#241a00",
+                        "on-tertiary-container": "#094623",
+                        "on-secondary-fixed-variant": "#832524",
+                        "background": "#fff8f6",
+                        "secondary-fixed": "#ffdad7",
+                        "on-tertiary-fixed": "#00210c",
+                        "on-primary-container": "#4b3a00",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed-variant": "#584400",
+                        "primary": "#755b00",
+                        "surface-container-low": "#fff0ed",
+                        "inverse-primary": "#ecc246",
+                        "primary-container": "#c9a227",
+                        "surface-container": "#ffe9e4",
+                        "secondary": "#a33c39",
+                        "primary-fixed-dim": "#ecc246",
+                        "error-container": "#ffdad6",
+                        "on-secondary-fixed": "#410004",
+                        "on-tertiary": "#ffffff",
+                        "surface-tint": "#755b00",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface": "#2b1611",
+                        "inverse-on-surface": "#ffede9",
+                        "outline-variant": "#d1c5af",
+                        "tertiary": "#326942",
+                        "surface-container-high": "#ffe2db",
+                        "error": "#ba1a1a",
+                        "surface-variant": "#ffdad2",
+                        "surface": "#fff8f6",
+                        "tertiary-fixed-dim": "#99d4a4",
+                        "on-surface-variant": "#4d4635",
+                        "secondary-fixed-dim": "#ffb3ae",
+                        "tertiary-fixed": "#b5f1bf",
+                        "surface-dim": "#f9d1c8",
+                        "on-primary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "outline": "#7f7663",
+                        "on-tertiary-fixed-variant": "#18512c",
+                        "surface-bright": "#fff8f6",
+                        "on-secondary-container": "#73191a",
+                        "on-background": "#2b1611"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "section-gap": "120px",
+                        "margin-desktop": "64px",
+                        "margin-mobile": "16px",
+                        "gutter": "24px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Playfair Display"],
+                        "subheading-rt": ["Merriweather"],
+                        "body-md": ["Inter"],
+                        "label-caps": ["Inter"],
+                        "display-lg": ["Playfair Display"],
+                        "display-lg-mobile": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "subheading-rt": ["20px", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "1.7", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                        "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "display-lg-mobile": ["40px", {"lineHeight": "1.2", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        .pattern-overlay {
+            background-image: url("https://www.transparenttextures.com/patterns/az-subtle.png");
+            opacity: 0.05;
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .hero-gradient {
+            background: linear-gradient(to bottom, rgba(43, 22, 17, 0.4), rgba(43, 22, 17, 0.7));
+        }
+
+        .adinkra-border {
+            border-image: linear-gradient(to bottom, #c9a227, transparent) 1;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-background font-body-md overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="bg-background dark:bg-background border-b border-primary-container dark:border-primary-fixed-dim shadow-sm docked full-width top-0 sticky flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop h-20 z-50">
+<div class="flex items-center gap-4">
+<button class="text-secondary dark:text-secondary-fixed Active: scale-95 transition-transform duration-150 p-2">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h1 class="font-headline-md text-headline-md font-bold text-secondary dark:text-secondary-fixed">Mankessim Portal</h1>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-primary dark:text-primary-fixed-dim border-b-2 border-primary dark:border-primary-fixed-dim font-medium py-1" href="#">Home</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors" href="history.html">History</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors" href="communities.html">Communities</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors" href="tourism.html">Tourism</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors" href="#">Culture</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="text-secondary dark:text-secondary-fixed hover:text-primary transition-colors">
+<span class="material-symbols-outlined">language</span>
+</button>
+</div>
+</header>
+<!-- Navigation Drawer (Mobile) -->
+<aside class="fixed inset-y-0 left-0 z-[60] flex flex-col h-full w-80 rounded-r-xl bg-surface dark:bg-surface-dim shadow-xl transform -translate-x-full transition-transform duration-300" id="nav-drawer">
+<div class="p-8 border-b border-outline-variant">
+<h2 class="font-display-lg text-secondary dark:text-secondary-fixed text-4xl font-bold">Oman Mankessim</h2>
+</div>
+<nav class="flex-1 py-4">
+<div class="bg-primary-container dark:bg-primary-fixed text-on-primary-container dark:text-on-primary-fixed font-bold rounded-full mx-2 flex items-center px-4 py-3 gap-4 mb-1">
+<span class="material-symbols-outlined">home</span>
+<span class="font-subheading-rt">Home</span>
+</div>
+<a class="text-on-surface-variant dark:text-on-surface-variant px-4 py-3 flex items-center gap-4 hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-all" href="history.html">
+<span class="material-symbols-outlined">history</span>
+<span class="font-subheading-rt">History</span>
+</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant px-4 py-3 flex items-center gap-4 hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-all" href="communities.html">
+<span class="material-symbols-outlined">group</span>
+<span class="font-subheading-rt">Communities</span>
+</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant px-4 py-3 flex items-center gap-4 hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-all" href="tourism.html">
+<span class="material-symbols-outlined">map</span>
+<span class="font-subheading-rt">Tourism</span>
+</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant px-4 py-3 flex items-center gap-4 hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-all" href="#">
+<span class="material-symbols-outlined">museum</span>
+<span class="font-subheading-rt">Culture</span>
+</a>
+</nav>
+</aside>
+<main>
+<!-- Hero Section -->
+<section class="relative h-[795px] w-full overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="A majestic portrait of the Omanhene (Paramount Chief) of Mankessim in full traditional regalia, including intricate Kente cloth and gold jewelry, set against a traditional palace courtyard." style="background-image: url(&quot;https://lh3.googleusercontent.com/aida/AP1WRLu_dJeBHEaA2PX6xjXPwaLfF5GQfgfsBmAQ4rVFO3k96HF2RfiQZBGfHYhUraqIw17e15ZHzBS1uJY2v8feVIvKBf-yJUsoQHeI58kR2uvyLjDxBN1Sx3tTIWVIVkbeG5ZqstZlSGQ6oDBPSIRLuSu8xytAa7WEtz4tTNGMsM51KxipIxwobxEjwjzAVt7ea_rR6XvyHq6BTlp_UCOdk1SneonOp82Q1vMHtoKcXqT4HUg73cLjtVAGug&quot;);"></div>
+<div class="absolute inset-0 hero-gradient"></div>
+<div class="relative z-10 h-full flex flex-col justify-center items-center text-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<span class="font-label-caps text-label-caps text-primary-fixed tracking-[0.3em] uppercase mb-6 fade-in visible">Heart of the Fante Kingdom</span>
+<h2 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-surface-container-lowest mb-8 max-w-4xl fade-in visible">Welcome to Oman Mankessim</h2>
+<p class="font-subheading-rt text-subheading-rt text-surface-container-high mb-12 max-w-2xl fade-in visible">Experience the living history, sacred traditions, and vibrant pulse of the historical capital of the Fante people.</p>
+<!-- Quick Links -->
+<div class="flex flex-wrap justify-center gap-gutter fade-in visible">
+<a class="group relative px-8 py-4 bg-secondary text-on-secondary font-label-caps text-label-caps rounded-sm transition-all hover:bg-on-secondary-container flex items-center gap-2" href="#">
+                        EXPLORE HISTORY
+                        <span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
+</a>
+<a class="group px-8 py-4 border-2 border-primary-fixed text-primary-fixed font-label-caps text-label-caps rounded-sm hover:bg-primary-fixed hover:text-on-primary-fixed transition-all flex items-center gap-2" href="#">
+                        VISIT COMMUNITIES
+                        <span class="material-symbols-outlined text-sm">groups</span>
+</a>
+<a class="group px-8 py-4 border-2 border-surface-container-lowest text-surface-container-lowest font-label-caps text-label-caps rounded-sm hover:bg-surface-container-lowest hover:text-secondary transition-all flex items-center gap-2" href="#">
+                        TOURISM
+                        <span class="material-symbols-outlined text-sm">explore</span>
+</a>
+</div>
+</div>
+<!-- Scroll Indicator -->
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-surface-container-high opacity-60">
+<span class="font-label-caps text-[10px]">SCROLL</span>
+<div class="w-[1px] h-12 bg-primary-fixed"></div>
+</div>
+</section>
+<!-- Introduction Section -->
+<section class="py-section-gap relative">
+<div class="absolute inset-0 pattern-overlay"></div>
+<div class="container mx-auto px-margin-mobile md:px-margin-desktop max-w-container-max relative z-10">
+<div class="grid md:grid-cols-2 gap-16 items-center">
+<div class="fade-in visible">
+<div class="w-20 h-1 bg-secondary mb-8"></div>
+<h3 class="font-headline-md text-headline-md text-secondary mb-6">A Legacy Carved in Stone and Story</h3>
+<div class="space-y-6 font-body-md text-on-surface-variant text-lg">
+<p class="">Mankessim stands as the historical capital of the Fante people. Founded by the legendary leaders Obunumankoma, Odapagyan, and Oson, who led their people from Tekyiman to their present home.</p>
+<p class="">Today, Mankessim is more than just a historical monument; it is a thriving hub of commerce, culture, and community. From the sacred Nananompow grove to the bustling central market, every corner of this city whispers tales of resilience and regality.</p>
+</div>
+<button class="mt-10 border-b-2 border-primary text-primary font-bold py-2 hover:text-secondary hover:border-secondary transition-all">Read Our Full Story</button>
+</div>
+<div class="relative fade-in visible">
+<div class="aspect-[4/5] bg-surface-container-high overflow-hidden shadow-2xl">
+<img class="w-full h-full object-cover" data-alt="A portrait of a Fante traditional leader in Mankessim, draped in rich, hand-woven Kente cloth with intricate geometric patterns. The leader is adorned with ornate gold jewelry, representing the wealth and prestige of the stool. The background is a blurred view of a traditional palace courtyard with carved wooden pillars. The lighting is soft and respectful, emphasizing the textures of the fabric and the gleaming gold, captured in a contemporary heritage aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7TQRebiPGSaYEUISXyueeG5S0N5CGPzfIb9OOBekoxjvLYE8IfzYaC8Yq-70mNBLn6_10pUmNjhcyBMI1auIDud98kBov0U6MEmBHFnlfxe97srrunHHbu6VeRV9aCwl57DuEiQyJ2K0Tkt2gTQfPvX123DU4rdyZqWS9hFGoa7o6YKzwv2T-X51zeqLvEbbh8R5YFY3kxg7I1AYDJvUk95osFeEECWcdrIlhvrqmXgxr0ek8PYjU">
+</div>
+<!-- Ornamental Adinkra Detail -->
+<div class="absolute -bottom-10 -right-10 w-48 h-48 bg-primary-container p-8 shadow-xl hidden md:block">
+<div class="w-full h-full border border-on-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-6xl text-on-primary-container" style="font-variation-settings: 'FILL' 1;">castle</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Events Bento Grid -->
+<section class="py-section-gap bg-surface-container-low">
+<div class="container mx-auto px-margin-mobile md:px-margin-desktop max-w-container-max">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+<div class="fade-in visible">
+<span class="font-label-caps text-secondary tracking-widest mb-2 block">UPCOMING</span>
+<h2 class="font-headline-md text-headline-md">Cultural Calendar</h2>
+</div>
+<a class="text-primary font-bold flex items-center gap-2 hover:underline fade-in visible" href="#">View all events <span class="material-symbols-outlined">calendar_month</span></a>
+</div>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-12 md:grid-rows-2 gap-gutter h-auto md:h-[600px]">
+<!-- Main Event -->
+<div class="md:col-span-7 md:row-span-2 group relative overflow-hidden bg-secondary-container fade-in visible">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="An energetic scene from the Akwambo Festival in Mankessim. Thousands of people are gathered in the streets, celebrating with drumming, dancing, and traditional displays. The atmosphere is vibrant, filled with movement and color. In the foreground, a group of young dancers in traditional attire are caught in mid-motion. The sun is high, creating sharp shadows and brilliant highlights on the festive garments. High-end documentary style photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQFd3HSuxG96piXNjyynxhuJ-c3JzSAhDIBc9oHPZaLHXlmL4cG6CzPydctFh3Srumj2g3pHzdjsSgjkQg5yqF_cSNxGKnijtud05u7yPa8Wx-mgV5LeZ77Torbf_OOHNxTdY2PByNi9PEPn0_oGS846VkdPaQHOsKQPO4XHId8U684oiGjQBXYc9byp1Ojgic7KURg_Zs64yJtgog7qInsV6U2_ClniQSmwQgVFymBX_6i00lOpaJ">
+<div class="absolute inset-0 bg-gradient-to-t from-secondary via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-0 left-0 p-8 text-on-secondary">
+<div class="bg-primary text-on-primary px-3 py-1 text-xs font-bold inline-block mb-4">SEPTEMBER 2024</div>
+<h4 class="text-3xl font-headline-md mb-2">The Annual Akwambo Festival</h4>
+<p class="max-w-md opacity-90">Join the Oman as we clear the paths and celebrate our ancestral journey with grand durbars and processions.</p>
+</div>
+</div>
+<!-- Small Event 1 -->
+<div class="md:col-span-5 md:row-span-1 group relative overflow-hidden bg-surface fade-in visible">
+<div class="flex h-full">
+<div class="w-1/3 h-full overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform" data-alt="Close-up of a traditional Fante drummer's hands striking a carved wooden drum. The drum is decorated with Adinkra symbols. The lighting is moody, focused on the hands and the texture of the drum skin. The aesthetic is archival and high-contrast, highlighting the cultural craftsmanship." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDp1mkB5CMwbaLcyFMWOMPC4q2uWTpR6Ca8zfnzr8dxnKrE_q56A4C2y1uls0CvNhJwDZELG0sRz7dwVfCMov1auVsOJxFv-sUICFxExlxmPBGlRSSHicRdNZot4hGZ8KtqG547pnqGtxWI4nFw8bhqUIeNNm9dvnjvVM9GMFyOMLIvKSZETLc0LhjuReVlm78reYM-XBFy7SM6s7YkKuC2_gzFCOBGbGtSrrT67Rf9QRYcBF5yp5Gt">
+</div>
+<div class="w-2/3 p-6 flex flex-col justify-center">
+<span class="font-label-caps text-secondary mb-2">WEEKLY</span>
+<h4 class="font-subheading-rt text-xl font-bold mb-2">Traditional Drumming Circle</h4>
+<p class="text-sm text-on-surface-variant">Experience the rhythmic heartbeat of Mankessim every Friday at the Palace grounds.</p>
+</div>
+</div>
+</div>
+<!-- Small Event 2 -->
+<div class="md:col-span-5 md:row-span-1 group relative overflow-hidden bg-primary-container fade-in visible">
+<div class="p-8 flex flex-col h-full justify-between">
+<div>
+<span class="material-symbols-outlined text-on-primary-container mb-4">storefront</span>
+<h4 class="font-subheading-rt text-xl font-bold text-on-primary-container mb-2">Grand Market Day</h4>
+<p class="text-sm text-on-primary-container opacity-80">Discover the largest trade hub in the Central Region, where history meets modern commerce.</p>
+</div>
+<div class="flex items-center justify-between mt-4">
+<span class="font-bold text-on-primary-container">Every Wednesday &amp; Saturday</span>
+<span class="material-symbols-outlined text-on-primary-container group-hover:translate-x-2 transition-transform">east</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Tourism CTA -->
+<section class="py-section-gap relative overflow-hidden bg-inverse-surface">
+
+<div class="container mx-auto px-margin-mobile md:px-margin-desktop max-w-container-max relative z-10 text-center">
+<h2 class="font-display-lg-mobile md:font-display-lg text-surface-container-lowest mb-8 fade-in visible">Plan Your Visit</h2>
+<p class="text-inverse-on-surface text-xl max-w-2xl mx-auto mb-12 fade-in visible">From sacred groves to royal palaces, discover why Mankessim is the soul of the Central Region.</p>
+<div class="flex flex-wrap justify-center gap-gutter fade-in visible">
+<button class="px-10 py-5 bg-primary text-on-primary font-bold rounded-sm hover:bg-primary-container transition-all shadow-lg">Download Visitor Guide</button>
+<button class="px-10 py-5 border-2 border-outline text-surface-container-lowest font-bold rounded-sm hover:bg-outline transition-all">Book a Heritage Tour</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-highest dark:bg-surface-container-lowest border-t-2 border-primary dark:border-primary-fixed w-full py-unit-8 px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-gutter">
+<div class="flex flex-col items-center md:items-start gap-2">
+<span class="font-label-caps text-label-caps text-secondary dark:text-secondary-fixed">OMAN MANKESSIM</span>
+<p class="text-on-surface-variant font-body-md text-body-md text-center md:text-left">© 2024 Mankessim Traditional Council. All Rights Reserved.</p>
+</div>
+<nav class="flex flex-wrap justify-center gap-8">
+<a class="text-on-surface-variant font-body-md text-body-md hover:underline decoration-primary underline-offset-4 transition: all 0.3s ease-in-out" href="#">Emergency Contacts</a>
+<a class="text-on-surface-variant font-body-md text-body-md hover:underline decoration-primary underline-offset-4 transition: all 0.3s ease-in-out" href="#">Traditional Council</a>
+<a class="text-on-surface-variant font-body-md text-body-md hover:underline decoration-primary underline-offset-4 transition: all 0.3s ease-in-out" href="#">Contact Us</a>
+<a class="text-on-surface-variant font-body-md text-body-md hover:underline decoration-primary underline-offset-4 transition: all 0.3s ease-in-out" href="#">Privacy Policy</a>
+</nav>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-secondary text-on-secondary flex items-center justify-center hover:scale-110 transition-transform" href="#">
+<span class="material-symbols-outlined text-sm">public</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-secondary text-on-secondary flex items-center justify-center hover:scale-110 transition-transform" href="#">
+<span class="material-symbols-outlined text-sm">mail</span>
+</a>
+</div>
+</footer>
+<script>
+        // Simple Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        // Mobile Nav Drawer Toggle
+        const menuBtn = document.querySelector('header button');
+        const drawer = document.getElementById('nav-drawer');
+        let isDrawerOpen = false;
+
+        menuBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            isDrawerOpen = !isDrawerOpen;
+            if (isDrawerOpen) {
+                drawer.classList.remove('-translate-x-full');
+            } else {
+                drawer.classList.add('-translate-x-full');
+            }
+        });
+
+        document.addEventListener('click', (e) => {
+            if (isDrawerOpen && !drawer.contains(e.target)) {
+                isDrawerOpen = false;
+                drawer.classList.add('-translate-x-full');
+            }
+        });
+    </script>
+
+
+
+
+</body></html>
