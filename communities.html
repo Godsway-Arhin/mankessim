@@ -290,6 +290,38 @@
 <button aria-label="Add Community Proposal" class="fixed bottom-8 right-8 w-16 h-16 rounded-full bg-primary text-white shadow-2xl flex items-center justify-center hover:scale-105 active:scale-95 transition-transform z-[100]">
 <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">add</span>
 </button>
+
+
+
+<!-- Mobile Navigation Drawer (Hidden by default) -->
+<div class="fixed inset-y-0 left-0 z-[60] flex flex-col h-full w-80 rounded-r-xl bg-surface dark:bg-surface-dim shadow-xl -translate-x-full transition-transform duration-300" id="nav-drawer">
+<div class="p-8 border-b border-primary-container">
+<h4 class="font-display-lg text-headline-md text-secondary dark:text-secondary-fixed">Oman Mankessim</h4>
+</div>
+<nav class="flex-grow py-6 flex flex-col">
+<a class="text-on-surface-variant px-8 py-4 hover:bg-surface-container-high transition-all flex items-center gap-4" href="index.html">
+<span class="material-symbols-outlined">home</span>
+<span class="font-subheading-rt">Home</span>
+</a>
+<a class="text-on-surface-variant px-8 py-4 hover:bg-surface-container-high transition-all flex items-center gap-4" href="history.html">
+<span class="material-symbols-outlined">history</span>
+<span class="font-subheading-rt">History</span>
+</a>
+<a class="bg-primary-container dark:bg-primary-fixed text-on-primary-container dark:text-on-primary-fixed font-bold rounded-full mx-4 px-6 py-4 flex items-center gap-4 shadow-sm" href="#">
+<span class="material-symbols-outlined">map</span>
+<span class="font-subheading-rt">Tourism</span>
+</a>
+<a class="text-on-surface-variant px-8 py-4 hover:bg-surface-container-high transition-all flex items-center gap-4" href="communities.html">
+<span class="material-symbols-outlined">group</span>
+<span class="font-subheading-rt">Communities</span>
+</a>
+<a class="text-on-surface-variant px-8 py-4 hover:bg-surface-container-high transition-all flex items-center gap-4" href="#">
+<span class="material-symbols-outlined">museum</span>
+<span class="font-subheading-rt">Culture</span>
+</a>
+</nav>
+
+
 <script>
         // Simple Scroll Reveal Effect
         const observerOptions = {
@@ -308,6 +340,40 @@
         document.querySelectorAll('article').forEach(el => {
             el.classList.add('opacity-0', 'translate-y-8', 'transition-all', 'duration-700');
             observer.observe(el);
+        });
+
+        const menuBtn = document.querySelector('header .material-symbols-outlined:first-child');
+        const drawer = document.getElementById('nav-drawer');
+        const overlay = document.getElementById('drawer-overlay');
+
+        function toggleDrawer() {
+            const isOpen = drawer.classList.contains('translate-x-0');
+            if (isOpen) {
+                drawer.classList.remove('translate-x-0');
+                drawer.classList.add('-translate-x-full');
+                overlay.classList.add('hidden');
+                overlay.classList.remove('opacity-100');
+            } else {
+                drawer.classList.remove('-translate-x-full');
+                drawer.classList.add('translate-x-0');
+                overlay.classList.remove('hidden');
+                setTimeout(() => overlay.classList.add('opacity-100'), 10);
+            }
+        }
+
+        menuBtn.addEventListener('click', toggleDrawer);
+        overlay.addEventListener('click', toggleDrawer);
+
+        // Add scroll animation for header
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('shadow-md');
+                header.classList.remove('shadow-sm');
+            } else {
+                header.classList.remove('shadow-md');
+                header.classList.add('shadow-sm');
+            }
         });
     </script>
 
