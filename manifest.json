@@ -1,0 +1,22 @@
+{
+  "name": "Mankessim Heritage",
+  "short_name": "Mankessim",
+  "description": "Official Heritage and Community Website of Mankessim",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F8F4E3",
+  "theme_color": "#7A1E1E",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
