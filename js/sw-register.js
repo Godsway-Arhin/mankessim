@@ -3,23 +3,12 @@ if ("serviceWorker" in navigator) {
     try {
       const registration = await navigator.serviceWorker.register("/service-worker.js");
 
-      registration.addEventListener("updatefound", () => {
-        const worker = registration.installing;
+      registration.update();
 
-        worker.addEventListener("statechange", () => {
-          if (
-            worker.state === "installed" &&
-            navigator.serviceWorker.controller
-          ) {
-            if (confirm("A new version of Mankessim Heritage is available. Reload now?")) {
-              window.location.reload();
-            }
-          }
-        });
-      });
+      console.log("Service Worker registered.");
 
-    } catch (err) {
-      console.log("Service Worker Error:", err);
+    } catch (error) {
+      console.error("Service Worker registration failed:", error);
     }
   });
 }
