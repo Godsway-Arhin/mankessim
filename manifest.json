@@ -1,22 +1,32 @@
 {
   "name": "Mankessim Heritage",
   "short_name": "Mankessim",
-  "description": "Official Heritage and Community Website of Mankessim",
+  "description": "The official digital heritage platform of Mankessim.",
+  "lang": "en",
+  "dir": "ltr",
   "start_url": "/",
+  "scope": "/",
   "display": "standalone",
+  "orientation": "portrait-primary",
   "background_color": "#F8F4E3",
   "theme_color": "#7A1E1E",
-  "orientation": "portrait-primary",
+  "categories": [
+    "education",
+    "travel",
+    "culture"
+  ],
   "icons": [
     {
-      "src": "icons/icon-192.png",
+      "src": "/icons/icon-192.png",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     },
     {
-      "src": "icons/icon-512.png",
+      "src": "/icons/icon-512.png",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     }
   ]
 }
