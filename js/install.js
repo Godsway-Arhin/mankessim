@@ -4,21 +4,36 @@ window.addEventListener("beforeinstallprompt", (e) => {
     e.preventDefault();
     deferredPrompt = e;
 
-    const installBtn = document.getElementById("installApp");
+    const popup = document.getElementById("install-popup");
 
-    if (installBtn) {
-        installBtn.style.display = "inline-flex";
-
-        installBtn.addEventListener("click", async () => {
-            deferredPrompt.prompt();
-
-            const choice = await deferredPrompt.userChoice;
-
-            if (choice.outcome === "accepted") {
-                console.log("App Installed");
-            }
-
-            deferredPrompt = null;
-        });
+    if (popup) {
+        popup.classList.remove("hidden");
     }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const installBtn = document.getElementById("install-now");
+    const laterBtn = document.getElementById("install-later");
+
+    installBtn?.addEventListener("click", async () => {
+
+        if (!deferredPrompt) return;
+
+        deferredPrompt.prompt();
+
+        await deferredPrompt.userChoice;
+
+        deferredPrompt = null;
+
+        document.getElementById("install-popup").classList.add("hidden");
+
+    });
+
+    laterBtn?.addEventListener("click", () => {
+
+        document.getElementById("install-popup").classList.add("hidden");
+
+    });
+
 });
