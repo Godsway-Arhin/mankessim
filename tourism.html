@@ -166,6 +166,45 @@ body{
 padding-bottom:80px;
 
 }
+
+.menu-card{
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+justify-content:center;
+
+gap:10px;
+
+padding:20px;
+
+border-radius:18px;
+
+background:#FFF8F0;
+
+color:#7A1E1E;
+
+font-weight:600;
+
+transition:.3s;
+
+box-shadow:0 3px 10px rgba(0,0,0,.08);
+
+}
+
+.menu-card:hover{
+
+background:#A67C00;
+
+color:white;
+
+transform:translateY(-5px);
+
+}
+      
   </style>
 </head>
 <body class="bg-background text-on-background font-body-md selection:bg-primary-container selection:text-on-primary-container">
@@ -465,18 +504,74 @@ padding-bottom:80px;
         </a>
 
         <button
-            id="moreButton"
-            class="bottom-nav flex flex-col items-center justify-center">
+    id="moreButton"
+    class="bottom-nav flex flex-col items-center justify-center">
 
-            <span class="material-symbols-outlined">menu</span>
+    <span class="material-symbols-outlined">apps</span>
 
-            <span class="text-xs mt-1">More</span>
+    <span class="text-xs mt-1">More</span>
 
-        </button>
-
+</button>
     </div>
 
 </nav>
+
+<!-- More Bottom Sheet -->
+<div id="moreSheet"
+     class="fixed inset-0 bg-black/40 hidden z-[9998]">
+
+    <div id="sheetPanel"
+         class="absolute bottom-0 left-0 w-full bg-white rounded-t-3xl p-6 transform translate-y-full transition-transform duration-300">
+
+        <div class="w-14 h-1.5 bg-gray-300 rounded-full mx-auto mb-6"></div>
+
+        <h2 class="text-2xl font-bold text-center text-[#7A1E1E] mb-6">
+            Explore Mankessim
+        </h2>
+
+        <div class="grid grid-cols-2 gap-4">
+
+            <a href="#"
+               class="menu-card">
+                <span class="material-symbols-outlined text-4xl">museum</span>
+                <span>Culture</span>
+            </a>
+
+            <a href="#"
+               class="menu-card">
+                <span class="material-symbols-outlined text-4xl">event</span>
+                <span>Festivals</span>
+            </a>
+
+            <a href="#"
+               class="menu-card">
+                <span class="material-symbols-outlined text-4xl">photo_library</span>
+                <span>Gallery</span>
+            </a>
+
+            <a href="#"
+               class="menu-card">
+                <span class="material-symbols-outlined text-4xl">map</span>
+                <span>Map</span>
+            </a>
+
+            <a href="#"
+               class="menu-card">
+                <span class="material-symbols-outlined text-4xl">call</span>
+                <span>Contacts</span>
+            </a>
+
+            <a href="#"
+               class="menu-card">
+                <span class="material-symbols-outlined text-4xl">info</span>
+                <span>About</span>
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
       
 <script>
         const menuBtn = document.querySelector('header .material-symbols-outlined:first-child');
@@ -513,6 +608,37 @@ padding-bottom:80px;
             }
         });
     </script>
+
+<script>
+const moreButton=document.getElementById("moreButton");
+const moreSheet=document.getElementById("moreSheet");
+const sheetPanel=document.getElementById("sheetPanel");
+
+moreButton.addEventListener("click",()=>{
+
+moreSheet.classList.remove("hidden");
+
+setTimeout(()=>{
+sheetPanel.classList.remove("translate-y-full");
+},10);
+
+});
+
+moreSheet.addEventListener("click",(e)=>{
+
+if(e.target===moreSheet){
+
+sheetPanel.classList.add("translate-y-full");
+
+setTimeout(()=>{
+moreSheet.classList.add("hidden");
+},300);
+
+}
+
+});
+</script>
+      
 <script src="js/install.js"></script>
 <!-- <script src="js/sw-register.js"></script> -->
 
