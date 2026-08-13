@@ -484,6 +484,119 @@ padding-bottom:80px;
     </div>
 
 </div>
+
+<!-- Bottom Navigation -->
+<nav class="fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 shadow-lg md:hidden z-50">
+
+    <div class="grid grid-cols-5 h-16">
+
+        <a href="index.html"
+           class="bottom-nav active flex flex-col items-center justify-center">
+
+            <span class="material-symbols-outlined">home</span>
+
+            <span class="text-xs mt-1">Home</span>
+
+        </a>
+
+        <a href="history.html"
+           class="bottom-nav flex flex-col items-center justify-center">
+
+            <span class="material-symbols-outlined">history_edu</span>
+
+            <span class="text-xs mt-1">History</span>
+
+        </a>
+
+        <a href="communities.html"
+           class="bottom-nav flex flex-col items-center justify-center">
+
+            <span class="material-symbols-outlined">groups</span>
+
+            <span class="text-xs mt-1">Communities</span>
+
+        </a>
+
+        <a href="tourism.html"
+           class="bottom-nav flex flex-col items-center justify-center">
+
+            <span class="material-symbols-outlined">travel_explore</span>
+
+            <span class="text-xs mt-1">Tourism</span>
+
+        </a>
+
+        <button
+    id="moreButton"
+    class="bottom-nav flex flex-col items-center justify-center">
+
+    <span class="material-symbols-outlined">apps</span>
+
+    <span class="text-xs mt-1">More</span>
+
+</button>
+
+    </div>
+
+</nav>
+
+<!-- More Bottom Sheet -->
+<div id="moreSheet"
+     class="fixed inset-0 bg-black/40 hidden z-[9998]">
+
+    <div id="sheetPanel"
+         class="absolute bottom-0 left-0 w-full bg-white rounded-t-3xl p-6 transform translate-y-full transition-transform duration-300">
+
+        <div class="w-14 h-1.5 bg-gray-300 rounded-full mx-auto mb-6"></div>
+
+        <h2 class="text-2xl font-bold text-center text-[#7A1E1E] mb-6">
+            Explore Mankessim
+        </h2>
+
+        <div class="grid grid-cols-2 gap-4">
+
+            <a href="#"
+               class="menu-card">
+                <span class="material-symbols-outlined text-4xl">museum</span>
+                <span>Culture</span>
+            </a>
+
+            <a href="#"
+               class="menu-card">
+                <span class="material-symbols-outlined text-4xl">event</span>
+                <span>Festivals</span>
+            </a>
+
+            <a href="#"
+               class="menu-card">
+                <span class="material-symbols-outlined text-4xl">photo_library</span>
+                <span>Gallery</span>
+            </a>
+
+            <a href="#"
+               class="menu-card">
+                <span class="material-symbols-outlined text-4xl">map</span>
+                <span>Map</span>
+            </a>
+
+            <a href="#"
+               class="menu-card">
+                <span class="material-symbols-outlined text-4xl">call</span>
+                <span>Contacts</span>
+            </a>
+
+            <a href="history.html"
+               class="menu-card">
+                <span class="material-symbols-outlined text-4xl">info</span>
+                <span>About</span>
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+      
 <script>
         // Simple Scroll Reveal Effect
         const observerOptions = {
