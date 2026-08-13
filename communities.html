@@ -651,6 +651,37 @@ padding-bottom:80px;
             }
         });
     </script>
+
+<script>
+const moreButton=document.getElementById("moreButton");
+const moreSheet=document.getElementById("moreSheet");
+const sheetPanel=document.getElementById("sheetPanel");
+
+moreButton.addEventListener("click",()=>{
+
+moreSheet.classList.remove("hidden");
+
+setTimeout(()=>{
+sheetPanel.classList.remove("translate-y-full");
+},10);
+
+});
+
+moreSheet.addEventListener("click",(e)=>{
+
+if(e.target===moreSheet){
+
+sheetPanel.classList.add("translate-y-full");
+
+setTimeout(()=>{
+moreSheet.classList.add("hidden");
+},300);
+
+}
+
+});
+</script>
+      
 <script src="js/install.js"></script>
 <!-- <script src="js/sw-register.js"></script> -->
 
