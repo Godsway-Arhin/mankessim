@@ -161,6 +161,29 @@ body{
 padding-bottom:80px;
 
 }
+
+.bottom-nav {
+    color: #666;
+    transition: .3s;
+}
+
+.bottom-nav:hover {
+    color: #7A1E1E;
+    transform: translateY(-2px);
+}
+
+.bottom-nav.active {
+    color: #7A1E1E;
+    font-weight: bold;
+}
+
+.bottom-nav .material-symbols-outlined {
+    font-size: 28px;
+}
+
+body {
+    padding-bottom: 80px;
+}
       
     </style>
 <style>
@@ -374,6 +397,91 @@ padding-bottom:80px;
 </nav>
 
 
+<!-- Mobile Bottom Navigation -->
+<nav class="fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 shadow-lg md:hidden z-50">
+
+    <div class="grid grid-cols-5 h-16">
+
+        <!-- Home -->
+        <a href="index.html"
+           class="bottom-nav flex flex-col items-center justify-center">
+
+            <span class="material-symbols-outlined">
+                home
+            </span>
+
+            <span class="text-xs mt-1">
+                Home
+            </span>
+
+        </a>
+
+
+        <!-- History -->
+        <a href="history.html"
+           class="bottom-nav flex flex-col items-center justify-center">
+
+            <span class="material-symbols-outlined">
+                history_edu
+            </span>
+
+            <span class="text-xs mt-1">
+                History
+            </span>
+
+        </a>
+
+
+        <!-- Communities - ACTIVE -->
+        <a href="communities.html"
+           class="bottom-nav active flex flex-col items-center justify-center">
+
+            <span class="material-symbols-outlined">
+                groups
+            </span>
+
+            <span class="text-xs mt-1">
+                Communities
+            </span>
+
+        </a>
+
+
+        <!-- Tourism -->
+        <a href="tourism.html"
+           class="bottom-nav flex flex-col items-center justify-center">
+
+            <span class="material-symbols-outlined">
+                travel_explore
+            </span>
+
+            <span class="text-xs mt-1">
+                Tourism
+            </span>
+
+        </a>
+
+
+        <!-- More -->
+        <button
+            id="moreButton"
+            class="bottom-nav flex flex-col items-center justify-center">
+
+            <span class="material-symbols-outlined">
+                apps
+            </span>
+
+            <span class="text-xs mt-1">
+                More
+            </span>
+
+        </button>
+
+    </div>
+
+</nav>
+      
+
 <script>
         // Simple Scroll Reveal Effect
         const observerOptions = {
@@ -434,4 +542,5 @@ padding-bottom:80px;
 <script src="js/install.js"></script>
 <!-- <script src="js/sw-register.js"></script> -->
 
-</body></html>
+</body>
+</html>
