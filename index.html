@@ -242,10 +242,21 @@ transform:translateY(-5px);
 <!-- TopAppBar -->
 <header class="bg-background dark:bg-background border-b border-primary-container dark:border-primary-fixed-dim shadow-sm docked full-width top-0 sticky flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop h-20 z-50">
 <div class="flex items-center gap-4">
-
+<div class="flex items-center gap-4">
+<button class="text-secondary dark:text-secondary-fixed Active: scale-95 transition-transform duration-150 p-2">
+<span class="material-symbols-outlined">menu</span>
+</button>
 <h1 class="font-headline-md text-headline-md font-bold text-secondary dark:text-secondary-fixed">Mankessim</h1>
 </div>
-
+        
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-primary dark:text-primary-fixed-dim border-b-2 border-primary dark:border-primary-fixed-dim font-medium py-1" href="#">Home</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors" href="history.html">History</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors" href="communities.html">Communities</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors" href="tourism.html">Tourism</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors" href="#">Culture</a>
+</nav>
+        
 <div class="flex items-center gap-4">
 <button class="text-secondary dark:text-secondary-fixed hover:text-primary transition-colors">
 <span class="material-symbols-outlined">language</span>
