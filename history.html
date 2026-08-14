@@ -738,8 +738,13 @@ researchers, and pilgrims from around the world.
      
 <!-- ========================= -->
 <!-- Timeline Starts -->
-<!-- ========================= -->
-
+<!-- Interactive Timeline Section -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto relative">
+<div class="absolute inset-0 adinkra-pattern pointer-events-none transition-all duration-1000 opacity-100 translate-y-0"></div>
+<div class="text-center mb-24 transition-all duration-1000 opacity-100 translate-y-0">
+<div class="flex justify-center mb-4">
+<span class="material-symbols-outlined text-primary text-4xl">history_edu</span>
+</div>
 <h3 class="font-headline-md text-headline-md text-on-surface mb-4">Legacy Through Ages</h3>
 <div class="h-1 w-24 bg-primary mx-auto"></div>
 </div>
@@ -895,119 +900,51 @@ researchers, and pilgrims from around the world.
 </div>
 </section>
 </main>
-    <!-- Continue with your existing timeline cards here -->
-
-<!-- =========================
-        FOOTER
-========================= -->
+<!-- Footer -->
 <footer class="w-full py-12 px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-8 bg-surface-container-highest border-t-2 border-primary">
-
-    <div class="flex flex-col items-center md:items-start">
-        <h5 class="font-label-caps text-label-caps text-secondary font-bold mb-2">
-            MANKESSIM PORTAL
-        </h5>
-
-        <p class="font-body-md text-body-md text-on-surface-variant text-center md:text-left">
-            © 2026 Mankessim Traditional Council.
-            All Rights Reserved.
-        </p>
-    </div>
-
-    <div class="flex gap-6">
-
-        <a href="#" class="hover:text-primary">
-            Privacy
-        </a>
-
-        <a href="#" class="hover:text-primary">
-            Contact
-        </a>
-
-        <a href="#" class="hover:text-primary">
-            Emergency
-        </a>
-
-    </div>
-
+<div class="flex flex-col items-center md:items-start">
+<h5 class="font-label-caps text-label-caps text-secondary font-bold mb-2">MANKESSIM PORTAL</h5>
+<p class="font-body-md text-body-md text-on-surface-variant text-center md:text-left">© 2024 Mankessim Traditional Council. All Rights Reserved.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="text-on-surface-variant font-body-md hover:underline decoration-primary underline-offset-4" href="#">Emergency Contacts</a>
+<a class="text-on-surface-variant font-body-md hover:underline decoration-primary underline-offset-4" href="#">Traditional Council</a>
+<a class="text-on-surface-variant font-body-md hover:underline decoration-primary underline-offset-4" href="#">Contact Us</a>
+<a class="text-on-surface-variant font-body-md hover:underline decoration-primary underline-offset-4" href="#">Privacy Policy</a>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-secondary cursor-pointer hover:scale-110 transition-transform">face_nod</span>
+<span class="material-symbols-outlined text-secondary cursor-pointer hover:scale-110 transition-transform">public</span>
+</div>
 </footer>
 
-
-<!-- =========================
-      DRAWER OVERLAY
-========================= -->
-
-<div id="drawer-overlay"
-class="fixed inset-0 bg-black/40 hidden opacity-0 transition-opacity duration-300 z-40">
+<!-- Mobile Navigation Drawer (Hidden by default) -->
+<div class="fixed inset-y-0 left-0 z-[60] flex flex-col h-full w-80 rounded-r-xl bg-surface dark:bg-surface-dim shadow-xl -translate-x-full transition-transform duration-300" id="nav-drawer">
+<div class="p-8 border-b border-primary-container">
+<h4 class="font-display-lg text-headline-md text-secondary dark:text-secondary-fixed">Oman Mankessim</h4>
 </div>
-
-
-<!-- =========================
-      MOBILE DRAWER
-========================= -->
-
-<div
-id="nav-drawer"
-class="fixed top-0 left-0 h-full w-80 bg-white shadow-xl z-50
--transform-x-full -translate-x-full transition-transform duration-300">
-
-<div class="p-8 border-b">
-
-<h2 class="text-2xl font-bold text-[#7A1E1E]">
-Mankessim
-</h2>
-
-</div>
-
-<nav class="flex flex-col py-4">
-
-<a href="index.html"
-class="px-6 py-4 flex items-center gap-3 hover:bg-gray-100">
-
-<span class="material-symbols-outlined">
-home
-</span>
-
-Home
-
+<nav class="flex-grow py-6 flex flex-col">
+<a class="text-on-surface-variant px-8 py-4 hover:bg-surface-container-high transition-all flex items-center gap-4" href="index.html">
+<span class="material-symbols-outlined">home</span>
+<span class="font-subheading-rt">Home</span>
 </a>
-
-<a href="history.html"
-class="px-6 py-4 flex items-center gap-3 bg-yellow-100 text-[#7A1E1E] font-bold">
-
-<span class="material-symbols-outlined">
-history_edu
-</span>
-
-History
-
+<a class="text-on-surface-variant px-8 py-4 hover:bg-surface-container-high transition-all flex items-center gap-4" href="history.html">
+<span class="material-symbols-outlined">history</span>
+<span class="font-subheading-rt">History</span>
 </a>
-
-<a href="communities.html"
-class="px-6 py-4 flex items-center gap-3 hover:bg-gray-100">
-
-<span class="material-symbols-outlined">
-groups
-</span>
-
-Communities
-
+<a class="bg-primary-container dark:bg-primary-fixed text-on-primary-container dark:text-on-primary-fixed font-bold rounded-full mx-4 px-6 py-4 flex items-center gap-4 shadow-sm" href="#">
+<span class="material-symbols-outlined">map</span>
+<span class="font-subheading-rt">Tourism</span>
 </a>
-
-<a href="tourism.html"
-class="px-6 py-4 flex items-center gap-3 hover:bg-gray-100">
-
-<span class="material-symbols-outlined">
-travel_explore
-</span>
-
-Tourism
-
+<a class="text-on-surface-variant px-8 py-4 hover:bg-surface-container-high transition-all flex items-center gap-4" href="communities.html">
+<span class="material-symbols-outlined">group</span>
+<span class="font-subheading-rt">Communities</span>
 </a>
-
+<a class="text-on-surface-variant px-8 py-4 hover:bg-surface-container-high transition-all flex items-center gap-4" href="#">
+<span class="material-symbols-outlined">museum</span>
+<span class="font-subheading-rt">Culture</span>
+</a>
 </nav>
-
-</div>
-
 
 
 <!-- =========================
