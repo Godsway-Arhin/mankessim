@@ -2,123 +2,187 @@
 <html lang="en" class="scroll-smooth">
 
 <head>
-
-    <!-- =========================================
+    <!-- =====================================================
          BASIC META
-    ========================================== -->
-
+    ====================================================== -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>History | Mankessim Heritage</title>
 
-    <meta name="description"
-          content="Explore the rich history and heritage of Mankessim.">
-
     <meta name="theme-color" content="#7A1E1E">
+    <meta name="description"
+        content="Explore the rich history and heritage of Mankessim.">
 
-
-    <!-- =========================================
+    <!-- =====================================================
          PWA
-    ========================================== -->
-
+    ====================================================== -->
     <link rel="manifest" href="manifest.json">
-
     <link rel="icon" href="icons/favicon.png">
-
     <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
 
     <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Mankessim Heritage">
 
-    <meta name="apple-mobile-web-app-status-bar-style"
-          content="default">
-
-    <meta name="apple-mobile-web-app-title"
-          content="Mankessim Heritage">
-
-
-    <!-- =========================================
+    <!-- =====================================================
          GOOGLE FONTS
-    ========================================== -->
+    ====================================================== -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Merriweather:wght@300;400;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
 
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Merriweather:wght@300;400;700&family=Inter:wght@400;500;600&display=swap"
-          rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet">
 
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
-          rel="stylesheet">
-
-
-    <!-- =========================================
+    <!-- =====================================================
          TAILWIND
-    ========================================== -->
-
+    ====================================================== -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 
-
-    <!-- =========================================
-         TAILWIND CONFIG
-    ========================================== -->
-
     <script>
-
         tailwind.config = {
-
             darkMode: "class",
 
             theme: {
-
                 extend: {
 
                     colors: {
-
                         primary: "#755b00",
                         secondary: "#7A1E1E",
 
-                        gold: "#C9A227",
+                        "primary-container": "#C9A227",
+                        "primary-fixed": "#FFE08E",
+                        "primary-fixed-dim": "#ECC246",
 
                         background: "#FFF8F6",
-                        surface: "#FFFFFF",
+                        surface: "#FFF8F6",
 
-                        text: "#2b1611",
+                        "surface-container": "#FFE9E4",
+                        "surface-container-low": "#FFF0ED",
+                        "surface-container-high": "#FFE2DB",
+                        "surface-container-highest": "#FFDAD2",
+                        "surface-container-lowest": "#FFFFFF",
 
-                        cream: "#FFF8F0",
+                        "on-primary": "#FFFFFF",
+                        "on-primary-fixed": "#241A00",
+                        "on-primary-fixed-variant": "#584400",
+                        "on-primary-container": "#4B3A00",
 
-                        "primary-light": "#FFF3DB",
+                        "on-surface": "#2B1611",
+                        "on-surface-variant": "#4D4635",
 
-                        "primary-dark": "#5F1717"
+                        "outline": "#7F7663",
+                        "outline-variant": "#D1C5AF",
 
+                        tertiary: "#326942",
+                        "tertiary-container": "#7AB486",
+                        "on-tertiary": "#FFFFFF",
+                        "on-tertiary-container": "#094623",
+                        "tertiary-fixed": "#B5F1BF",
+                        "tertiary-fixed-dim": "#99D4A4",
+
+                        error: "#BA1A1A",
+                        "error-container": "#FFDAD6",
+                        "on-error": "#FFFFFF",
+                        "on-error-container": "#93000A",
+
+                        "secondary-container": "#FD817A",
+                        "secondary-fixed": "#FFDAD7",
+                        "secondary-fixed-dim": "#FFB3AE",
+                        "on-secondary": "#FFFFFF",
+                        "on-secondary-container": "#73191A",
+                        "on-secondary-fixed": "#410004",
+                        "on-secondary-fixed-variant": "#832524",
+
+                        "surface-tint": "#755B00",
+                        "surface-bright": "#FFF8F6",
+                        "surface-dim": "#F9D1C8",
+
+                        "inverse-surface": "#432A25",
+                        "inverse-primary": "#ECC246",
+                        "inverse-on-surface": "#FFede9"
+                    },
+
+                    borderRadius: {
+                        DEFAULT: "0.125rem",
+                        lg: "0.25rem",
+                        xl: "0.5rem",
+                        full: "0.75rem"
+                    },
+
+                    spacing: {
+                        "section-gap": "120px",
+                        "margin-desktop": "64px",
+                        "margin-mobile": "16px",
+                        gutter: "24px",
+                        "container-max": "1280px"
                     },
 
                     fontFamily: {
-
                         display: ["Playfair Display", "serif"],
-
                         headline: ["Playfair Display", "serif"],
+                        "headline-md": ["Playfair Display", "serif"],
+                        "subheading-rt": ["Merriweather", "serif"],
+                        body: ["Inter", "sans-serif"],
+                        "body-md": ["Inter", "sans-serif"],
+                        "label-caps": ["Inter", "sans-serif"]
+                    },
 
-                        serif: ["Merriweather", "serif"],
+                    fontSize: {
+                        "headline-md": [
+                            "32px",
+                            {
+                                lineHeight: "1.3",
+                                fontWeight: "600"
+                            }
+                        ],
 
-                        body: ["Inter", "sans-serif"]
+                        "subheading-rt": [
+                            "20px",
+                            {
+                                lineHeight: "1.6",
+                                letterSpacing: "0.01em",
+                                fontWeight: "400"
+                            }
+                        ],
 
+                        "body-md": [
+                            "16px",
+                            {
+                                lineHeight: "1.7",
+                                fontWeight: "400"
+                            }
+                        ],
+
+                        "label-caps": [
+                            "12px",
+                            {
+                                lineHeight: "1",
+                                letterSpacing: "0.1em",
+                                fontWeight: "600"
+                            }
+                        ],
+
+                        "display-lg": [
+                            "64px",
+                            {
+                                lineHeight: "1.1",
+                                letterSpacing: "-0.02em",
+                                fontWeight: "700"
+                            }
+                        ]
                     }
-
                 }
-
             }
-
         };
-
     </script>
 
-
-    <!-- =========================================
+    <!-- =====================================================
          CUSTOM CSS
-    ========================================== -->
-
+    ====================================================== -->
     <style>
-
-        /* -----------------------------------------
-           GLOBAL
-        ----------------------------------------- */
 
         * {
             margin: 0;
@@ -131,26 +195,15 @@
         }
 
         body {
-
             min-height: max(884px, 100dvh);
-
             font-family: "Inter", sans-serif;
-
-            background: #FFF8F0;
-
-            color: #2b1611;
-
+            background: #FFF8F6;
+            color: #2B1611;
             padding-bottom: 90px;
-
         }
 
-
-        /* -----------------------------------------
-           MATERIAL ICONS
-        ----------------------------------------- */
-
+        /* Material Icons */
         .material-symbols-outlined {
-
             font-variation-settings:
                 'FILL' 0,
                 'wght' 400,
@@ -158,347 +211,181 @@
                 'opsz' 24;
 
             vertical-align: middle;
-
         }
 
-
-        /* -----------------------------------------
-           HEADER
-        ----------------------------------------- */
-
-        header {
-
-            backdrop-filter: blur(12px);
-
-        }
-
-
-        /* -----------------------------------------
-           HERO / GRADIENT
-        ----------------------------------------- */
-
-        .hero-gradient {
-
-            background:
-                linear-gradient(
-                    to bottom,
-                    rgba(0, 0, 0, .35),
-                    rgba(0, 0, 0, .75)
-                );
-
-        }
-
-
-        /* -----------------------------------------
-           ADINKRA PATTERN
-        ----------------------------------------- */
+        /* =================================================
+           HERITAGE / ADINKRA BACKGROUND
+        ================================================== */
 
         .adinkra-pattern {
-
-            background-image:
-                url("https://www.transparenttextures.com/patterns/cubes.png");
-
-            opacity: .05;
-
+            background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+            opacity: 0.08;
         }
 
-
-        /* -----------------------------------------
+        /* =================================================
            TIMELINE
-        ----------------------------------------- */
+        ================================================== */
 
         .timeline-line {
-
-            background: #A67C00;
-
+            background: linear-gradient(
+                to bottom,
+                #755B00 0%,
+                #755B00 100%
+            );
         }
 
-        .timeline-dot {
+        /* =================================================
+           HERO
+        ================================================== */
 
-            background: #7A1E1E;
-
-            border-color: #FFF8F0;
-
+        .hero-gradient {
+            background: linear-gradient(
+                to bottom,
+                rgba(43, 22, 17, 0.4),
+                rgba(43, 22, 17, 0.8)
+            );
         }
 
-
-        /* -----------------------------------------
-           HISTORY CARDS
-        ----------------------------------------- */
-
-        .history-card {
-
-            background: #FFFFFF;
-
-            border-radius: 20px;
-
-            box-shadow:
-                0 10px 30px rgba(0, 0, 0, .08);
-
-            overflow: hidden;
-
-        }
-
-
-        /* -----------------------------------------
-           ARCHIVE / GALLERY
-        ----------------------------------------- */
+        /* =================================================
+           ARCHIVE IMAGES
+        ================================================== */
 
         .sepia-effect {
-
-            filter:
-                sepia(.3)
-                contrast(1.05)
-                brightness(.95);
-
-            transition:
-                .4s ease;
-
+            filter: sepia(0.3) contrast(1.1) brightness(0.9);
+            transition: all 0.5s ease;
         }
 
         .sepia-effect:hover {
-
-            filter:
-                sepia(0)
-                contrast(1)
-                brightness(1);
-
+            filter: sepia(0) contrast(1) brightness(1);
             transform: scale(1.02);
-
         }
 
-
-        /* -----------------------------------------
+        /* =================================================
            BOTTOM NAVIGATION
-        ----------------------------------------- */
+        ================================================== */
 
         .bottom-nav {
-
             color: #777;
-
-            transition: .3s;
-
+            transition: 0.3s;
         }
 
         .bottom-nav:hover {
-
             color: #7A1E1E;
-
             transform: translateY(-2px);
-
         }
 
         .bottom-nav.active {
-
             color: #7A1E1E;
-
             font-weight: 700;
-
         }
 
         .bottom-nav .material-symbols-outlined {
-
             font-size: 28px;
-
         }
 
-
-        /* -----------------------------------------
-           MOBILE BOTTOM NAV
-        ----------------------------------------- */
-
-        .mobile-nav {
-
-            position: fixed;
-
-            bottom: 15px;
-
-            left: 50%;
-
-            transform: translateX(-50%);
-
-            width: 95%;
-
-            max-width: 500px;
-
-            height: 70px;
-
-            background: rgba(255, 255, 255, .95);
-
-            backdrop-filter: blur(15px);
-
-            border-radius: 25px;
-
-            box-shadow:
-                0 10px 30px rgba(0, 0, 0, .15);
-
-            z-index: 9999;
-
-        }
-
-
-        /* -----------------------------------------
+        /* =================================================
            MORE MENU CARDS
-        ----------------------------------------- */
+        ================================================== */
 
         .menu-card {
-
             display: flex;
-
             flex-direction: column;
-
             justify-content: center;
-
             align-items: center;
-
             gap: 12px;
 
             padding: 22px;
 
             background: #FFF8F0;
-
             border-radius: 18px;
 
             color: #7A1E1E;
-
             font-weight: 600;
 
-            transition: .3s;
+            transition: 0.3s;
 
-            box-shadow:
-                0 5px 15px rgba(0, 0, 0, .08);
-
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
         }
 
         .menu-card:hover {
-
             background: #7A1E1E;
-
             color: white;
-
             transform: translateY(-5px);
-
         }
 
-
-        /* -----------------------------------------
+        /* =================================================
            DRAWER
-        ----------------------------------------- */
+        ================================================== */
 
         #nav-drawer {
-
-            transition: .35s;
-
+            transition: 0.35s;
         }
-
-
-        /* -----------------------------------------
-           DRAWER OVERLAY
-        ----------------------------------------- */
 
         #drawer-overlay {
-
-            transition: .3s;
-
+            transition: 0.3s;
         }
 
-
-        /* -----------------------------------------
+        /* =================================================
            INSTALL BUTTON
-        ----------------------------------------- */
+        ================================================== */
 
         .install-btn {
-
             background: #7A1E1E;
-
             color: white;
 
             padding: 14px 28px;
-
             border-radius: 50px;
 
             font-weight: 600;
 
-            box-shadow:
-                0 8px 25px rgba(122, 30, 30, .3);
+            box-shadow: 0 8px 25px rgba(122, 30, 30, 0.3);
 
-            transition: .3s;
-
+            transition: 0.3s;
         }
 
         .install-btn:hover {
-
             transform: translateY(-2px);
-
             background: #5F1717;
-
         }
 
-
-        /* -----------------------------------------
+        /* =================================================
            SCROLLBAR
-        ----------------------------------------- */
+        ================================================== */
 
         ::-webkit-scrollbar {
-
             width: 8px;
-
         }
 
         ::-webkit-scrollbar-thumb {
-
             background: #7A1E1E;
-
             border-radius: 20px;
-
         }
 
         ::-webkit-scrollbar-track {
-
-            background: #f3f3f3;
-
-        }
-
-
-        /* -----------------------------------------
-           MOBILE TIMELINE
-        ----------------------------------------- */
-
-        @media (max-width: 767px) {
-
-            .timeline-mobile-line {
-
-                display: none;
-
-            }
-
+            background: #F3F3F3;
         }
 
     </style>
-
 </head>
 
 
-<body>
+<body class="bg-background text-on-surface">
 
-
-    <!-- =========================================
+    <!-- =====================================================
          DRAWER OVERLAY
-    ========================================== -->
+    ====================================================== -->
 
     <div id="drawer-overlay"
-         class="fixed inset-0 bg-black/40 hidden opacity-0 z-40">
+        class="fixed inset-0 bg-black/40 hidden opacity-0 z-40">
     </div>
 
 
-    <!-- =========================================
+    <!-- =====================================================
          NAVIGATION DRAWER
-    ========================================== -->
+    ====================================================== -->
 
     <div id="nav-drawer"
-         class="fixed top-0 left-0 h-full w-80 bg-white shadow-2xl -translate-x-full z-50 overflow-y-auto">
-
-        <!-- Drawer Header -->
+        class="fixed top-0 left-0 h-full w-80 bg-white shadow-2xl -translate-x-full z-50 overflow-y-auto">
 
         <div class="bg-[#7A1E1E] text-white p-8">
 
@@ -512,13 +399,10 @@
 
         </div>
 
-
-        <!-- Drawer Navigation -->
-
         <nav class="py-6">
 
             <a href="index.html"
-               class="flex items-center gap-4 px-8 py-4 hover:bg-[#FFF8F0] transition">
+                class="flex items-center gap-4 px-8 py-4 hover:bg-[#FFF8F0] transition">
 
                 <span class="material-symbols-outlined">
                     home
@@ -530,7 +414,7 @@
 
 
             <a href="history.html"
-               class="flex items-center gap-4 px-8 py-4 bg-[#FFF3DB] font-bold text-[#7A1E1E]">
+                class="flex items-center gap-4 px-8 py-4 bg-[#FFF3DB] font-bold text-[#7A1E1E]">
 
                 <span class="material-symbols-outlined">
                     history_edu
@@ -542,7 +426,7 @@
 
 
             <a href="communities.html"
-               class="flex items-center gap-4 px-8 py-4 hover:bg-[#FFF8F0] transition">
+                class="flex items-center gap-4 px-8 py-4 hover:bg-[#FFF8F0] transition">
 
                 <span class="material-symbols-outlined">
                     groups
@@ -554,7 +438,7 @@
 
 
             <a href="tourism.html"
-               class="flex items-center gap-4 px-8 py-4 hover:bg-[#FFF8F0] transition">
+                class="flex items-center gap-4 px-8 py-4 hover:bg-[#FFF8F0] transition">
 
                 <span class="material-symbols-outlined">
                     travel_explore
@@ -566,7 +450,7 @@
 
 
             <a href="#"
-               class="flex items-center gap-4 px-8 py-4 hover:bg-[#FFF8F0] transition">
+                class="flex items-center gap-4 px-8 py-4 hover:bg-[#FFF8F0] transition">
 
                 <span class="material-symbols-outlined">
                     museum
@@ -581,52 +465,32 @@
     </div>
 
 
-    <!-- =========================================
+    <!-- =====================================================
          HEADER
-    ========================================== -->
+    ====================================================== -->
 
     <header class="sticky top-0 bg-white shadow-sm z-30">
 
-        <div class="max-w-7xl mx-auto
-                    flex items-center justify-between
-                    h-20 px-5">
+        <div class="max-w-7xl mx-auto flex items-center justify-between h-20 px-5">
 
+            <button id="menuButton" aria-label="Open menu">
 
-            <!-- Menu -->
-
-            <button id="menuButton"
-                    aria-label="Open navigation menu">
-
-                <span class="material-symbols-outlined
-                             text-3xl text-[#7A1E1E]">
-
+                <span class="material-symbols-outlined text-3xl text-[#7A1E1E]">
                     menu
-
                 </span>
 
             </button>
 
 
-            <!-- Logo / Title -->
-
-            <h1 class="text-2xl md:text-3xl
-                       font-display font-bold
-                       text-[#7A1E1E]">
-
+            <h1 class="text-2xl md:text-3xl font-display font-bold text-[#7A1E1E]">
                 Mankessim Heritage
-
             </h1>
 
 
-            <!-- Language -->
-
             <button aria-label="Language">
 
-                <span class="material-symbols-outlined
-                             text-3xl text-[#7A1E1E]">
-
+                <span class="material-symbols-outlined text-3xl text-[#7A1E1E]">
                     language
-
                 </span>
 
             </button>
@@ -636,24 +500,22 @@
     </header>
 
 
-    <!-- =========================================
+    <!-- =====================================================
          MAIN CONTENT
-    ========================================== -->
+    ====================================================== -->
 
     <main>
 
 
-        <!-- =========================================
+        <!-- =================================================
              ORIGINS OF MANKESSIM
-        ========================================== -->
+        ================================================== -->
 
         <section class="py-24 bg-[#FFF8F0]">
 
             <div class="max-w-7xl mx-auto px-6">
 
-                <div class="grid lg:grid-cols-2
-                            gap-16 items-center">
-
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
 
                     <!-- Image -->
 
@@ -662,9 +524,7 @@
                         <img
                             src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=1200"
                             alt="Migration of the Fante People"
-                            class="rounded-3xl shadow-2xl
-                                   w-full h-[500px]
-                                   object-cover">
+                            class="rounded-3xl shadow-2xl w-full h-[500px] object-cover">
 
                     </div>
 
@@ -673,78 +533,47 @@
 
                     <div>
 
-                        <span class="text-[#A67C00]
-                                     uppercase
-                                     tracking-[4px]
-                                     font-semibold">
-
+                        <span class="text-[#A67C00] uppercase tracking-[4px] font-semibold">
                             OUR ORIGIN
-
                         </span>
 
 
-                        <h2 class="text-5xl font-bold
-                                   text-[#7A1E1E]
-                                   mt-4 mb-8">
-
+                        <h2 class="text-5xl font-bold text-[#7A1E1E] mt-4 mb-8">
                             The Birth of Mankessim
-
                         </h2>
 
 
-                        <p class="text-lg
-                                  leading-9
-                                  text-gray-700
-                                  mb-6">
+                        <p class="text-lg leading-9 text-gray-700 mb-6">
 
-                            Mankessim occupies a unique place in
-                            Ghana's history as the traditional
-                            birthplace of the Fante people.
-                            According to oral tradition, the
-                            ancestors of the Fante migrated from
-                            Techiman under the spiritual leadership
-                            of three revered leaders:
+                            Mankessim occupies a unique place in Ghana's history
+                            as the traditional birthplace of the Fante people.
+                            According to oral tradition, the ancestors of the
+                            Fante migrated from Techiman under the spiritual
+                            leadership of three revered leaders:
 
                         </p>
 
 
-                        <!-- Leader 1 -->
-
                         <div class="space-y-5">
-
 
                             <div class="flex items-start gap-4">
 
-                                <div class="w-12 h-12
-                                            rounded-full
-                                            bg-[#A67C00]
-                                            text-white
-                                            flex items-center
-                                            justify-center
-                                            font-bold
-                                            flex-shrink-0">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-[#A67C00] text-white flex items-center justify-center font-bold flex-shrink-0">
 
                                     1
 
                                 </div>
 
-
                                 <div>
 
-                                    <h3 class="font-bold
-                                               text-2xl
-                                               text-[#7A1E1E]">
-
+                                    <h3 class="font-bold text-2xl text-[#7A1E1E]">
                                         Oburumankoma
-
                                     </h3>
 
                                     <p class="text-gray-600">
-
-                                        The elder spiritual leader
-                                        who guided the people during
-                                        the migration.
-
+                                        The elder spiritual leader who guided
+                                        the people during the migration.
                                     </p>
 
                                 </div>
@@ -752,40 +581,24 @@
                             </div>
 
 
-                            <!-- Leader 2 -->
-
                             <div class="flex items-start gap-4">
 
-                                <div class="w-12 h-12
-                                            rounded-full
-                                            bg-[#A67C00]
-                                            text-white
-                                            flex items-center
-                                            justify-center
-                                            font-bold
-                                            flex-shrink-0">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-[#A67C00] text-white flex items-center justify-center font-bold flex-shrink-0">
 
                                     2
 
                                 </div>
 
-
                                 <div>
 
-                                    <h3 class="font-bold
-                                               text-2xl
-                                               text-[#7A1E1E]">
-
+                                    <h3 class="font-bold text-2xl text-[#7A1E1E]">
                                         Odapagyan
-
                                     </h3>
 
                                     <p class="text-gray-600">
-
-                                        A courageous leader remembered
-                                        for wisdom and bravery throughout
-                                        the journey.
-
+                                        A courageous leader remembered for
+                                        wisdom and bravery throughout the journey.
                                     </p>
 
                                 </div>
@@ -793,42 +606,25 @@
                             </div>
 
 
-                            <!-- Leader 3 -->
-
                             <div class="flex items-start gap-4">
 
-                                <div class="w-12 h-12
-                                            rounded-full
-                                            bg-[#A67C00]
-                                            text-white
-                                            flex items-center
-                                            justify-center
-                                            font-bold
-                                            flex-shrink-0">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-[#A67C00] text-white flex items-center justify-center font-bold flex-shrink-0">
 
                                     3
 
                                 </div>
 
-
                                 <div>
 
-                                    <h3 class="font-bold
-                                               text-2xl
-                                               text-[#7A1E1E]">
-
+                                    <h3 class="font-bold text-2xl text-[#7A1E1E]">
                                         Oson
-
                                     </h3>
 
                                     <p class="text-gray-600">
-
-                                        The youngest of the three
-                                        legendary leaders whose
-                                        descendants continue to play
-                                        an important role in Fante
-                                        tradition.
-
+                                        The youngest of the three legendary
+                                        leaders whose descendants continue to
+                                        play an important role in Fante tradition.
                                     </p>
 
                                 </div>
@@ -838,32 +634,21 @@
                         </div>
 
 
-                        <!-- Why Mankessim Matters -->
+                        <div
+                            class="mt-10 p-6 rounded-2xl bg-[#7A1E1E] text-white shadow-xl">
 
-                        <div class="mt-10 p-6
-                                    rounded-2xl
-                                    bg-[#7A1E1E]
-                                    text-white
-                                    shadow-xl">
-
-                            <h3 class="text-2xl
-                                       font-bold
-                                       mb-3">
-
+                            <h3 class="text-2xl font-bold mb-3">
                                 Why Mankessim Matters
-
                             </h3>
 
                             <p class="leading-8">
 
-                                Mankessim became the spiritual
-                                headquarters of the Fante Confederacy
-                                and remains one of Ghana's most
-                                important traditional towns. Its
-                                sacred sites, traditional leadership,
-                                and cultural heritage continue to
-                                attract visitors, researchers, and
-                                pilgrims from around the world.
+                                Mankessim became the spiritual headquarters of
+                                the Fante Confederacy and remains one of Ghana's
+                                most important traditional towns. Its sacred
+                                sites, traditional leadership, and cultural
+                                heritage continue to attract visitors,
+                                researchers, and pilgrims from around the world.
 
                             </p>
 
@@ -878,301 +663,204 @@
         </section>
 
 
+        <!-- =================================================
+             INTERACTIVE TIMELINE
+        ================================================== -->
 
-        <!-- =========================================
-             TIMELINE
-        ========================================== -->
+        <section
+            class="relative py-24 px-4 md:px-16 max-w-[1280px] mx-auto overflow-hidden">
 
-        <section class="py-24 px-6 bg-[#FFF8F0]">
+            <!-- ORIGINAL HERITAGE BACKGROUND -->
 
-            <div class="max-w-7xl mx-auto">
-
-
-                <!-- Heading -->
-
-                <div class="text-center mb-20">
-
-                    <span class="text-[#A67C00]
-                                 uppercase
-                                 tracking-[4px]
-                                 font-semibold">
-
-                        OUR JOURNEY
-
-                    </span>
+            <div
+                class="absolute inset-0 adinkra-pattern pointer-events-none">
+            </div>
 
 
-                    <h2 class="text-4xl md:text-5xl
-                               font-bold
-                               text-[#7A1E1E]
-                               mt-4">
+            <!-- Timeline Content -->
 
+            <div class="relative z-10">
+
+                <!-- Timeline Heading -->
+
+                <div class="text-center mb-24">
+
+                    <div class="flex justify-center mb-4">
+
+                        <span class="material-symbols-outlined text-primary text-4xl">
+                            history_edu
+                        </span>
+
+                    </div>
+
+
+                    <h3 class="font-headline-md text-headline-md text-on-surface mb-4">
                         Legacy Through Ages
+                    </h3>
 
-                    </h2>
 
-
-                    <div class="w-24 h-1
-                                bg-[#A67C00]
-                                mx-auto mt-6">
+                    <div class="h-1 w-24 bg-primary mx-auto">
                     </div>
 
                 </div>
 
 
-                <!-- Timeline -->
+                <!-- Central Line -->
 
                 <div class="relative">
 
-
-                    <!-- Central Line -->
-
-                    <div class="absolute
-                                left-1/2
-                                -translate-x-1/2
-                                top-0 bottom-0
-                                w-1
-                                bg-[#A67C00]
-                                hidden md:block">
+                    <div
+                        class="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 timeline-line hidden md:block">
                     </div>
 
 
-                    <!-- =================================
+                    <!-- =====================================
                          TIMELINE ITEM 1
-                    ================================== -->
+                    ====================================== -->
 
-                    <div class="relative
-                                grid md:grid-cols-2
-                                gap-12
-                                items-center
-                                mb-24">
+                    <div class="flex flex-col md:flex-row items-center mb-32 relative">
 
+                        <div
+                            class="md:w-1/2 md:pr-20 text-right order-2 md:order-1">
 
-                        <!-- Text -->
-
-                        <div class="text-left
-                                    md:text-right">
-
-                            <span class="text-[#A67C00]
-                                         text-3xl
-                                         font-bold">
-
+                            <span
+                                class="font-headline-md text-primary text-4xl mb-2 block">
                                 13th Century
-
                             </span>
 
-
-                            <h3 class="text-2xl
-                                       font-bold
-                                       text-[#7A1E1E]
-                                       mt-2 mb-4">
-
+                            <h4
+                                class="font-subheading-rt text-2xl font-bold text-on-surface mb-4">
                                 Departure from Techiman
+                            </h4>
 
-                            </h3>
+                            <p class="text-on-surface-variant leading-relaxed">
 
-
-                            <p class="text-gray-600
-                                      leading-8">
-
-                                The Fante people begin their historic
-                                migration southwards, led by the
-                                spiritual guidance of the three great
-                                patriarchs escaping conflict and
-                                searching for a permanent home.
+                                The Fante people begin their historic migration
+                                southwards, led by the spiritual guidance of
+                                the three great patriarchs escaping conflict
+                                and searching for a permanent home.
 
                             </p>
 
                         </div>
 
 
-                        <!-- Image -->
-
-                        <div class="history-card">
-
-                            <div class="w-full h-72
-                                        bg-cover
-                                        bg-center"
-                                 style="background-image:
-                                 url('https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg');">
-
-                            </div>
-
+                        <div
+                            class="z-10 bg-primary w-6 h-6 rounded-full border-4 border-background absolute left-1/2 transform -translate-x-1/2 hidden md:block">
                         </div>
 
 
-                        <!-- Dot -->
+                        <div
+                            class="md:w-1/2 md:pl-20 order-1 md:order-2 mb-8 md:mb-0">
 
-                        <div class="timeline-dot
-                                    absolute
-                                    left-1/2
-                                    -translate-x-1/2
-                                    w-6 h-6
-                                    rounded-full
-                                    border-4
-                                    hidden md:block">
+                            <div
+                                class="w-full aspect-video bg-cover bg-center shadow-2xl border-2 border-primary-container"
+                                data-alt="An artistic digital painting of a group of ancient West African travelers moving through a savanna landscape at sunset.">
+
+                            </div>
+
                         </div>
 
                     </div>
 
 
-
-                    <!-- =================================
+                    <!-- =====================================
                          TIMELINE ITEM 2
-                    ================================== -->
+                    ====================================== -->
 
-                    <div class="relative
-                                grid md:grid-cols-2
-                                gap-12
-                                items-center
-                                mb-24">
+                    <div
+                        class="flex flex-col md:flex-row items-center mb-32 relative">
 
+                        <div
+                            class="md:w-1/2 md:pr-20 mb-8 md:mb-0">
 
-                        <!-- Image -->
-
-                        <div class="history-card
-                                    order-2
-                                    md:order-1">
-
-                            <div class="w-full h-72
-                                        bg-cover
-                                        bg-center"
-                                 style="background-image:
-                                 url('https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg');">
+                            <div
+                                class="w-full aspect-video bg-cover bg-center shadow-2xl border-2 border-primary-container"
+                                data-alt="A detailed close-up of an ancient ceremonial brass bowl sitting on a stone altar in a sacred grove.">
 
                             </div>
 
                         </div>
 
 
-                        <!-- Text -->
+                        <div
+                            class="z-10 bg-primary w-6 h-6 rounded-full border-4 border-background absolute left-1/2 transform -translate-x-1/2 hidden md:block">
+                        </div>
 
-                        <div class="order-1
-                                    md:order-2">
 
-                            <span class="text-[#A67C00]
-                                         text-3xl
-                                         font-bold">
+                        <div
+                            class="md:w-1/2 md:pl-20 text-left">
 
+                            <span
+                                class="font-headline-md text-primary text-4xl mb-2 block">
                                 The Settlement
-
                             </span>
 
-
-                            <h3 class="text-2xl
-                                       font-bold
-                                       text-[#7A1E1E]
-                                       mt-2 mb-4">
-
+                            <h4
+                                class="font-subheading-rt text-2xl font-bold text-on-surface mb-4">
                                 Discovery of the Sacred Grove
+                            </h4>
 
-                            </h3>
+                            <p class="text-on-surface-variant leading-relaxed">
 
-
-                            <p class="text-gray-600
-                                      leading-8">
-
-                                The arrival at the site that would
-                                become Mankessim. The establishment
-                                of the Nananom Mpow (Sacred Grove)
-                                served as the spiritual foundation
+                                The arrival at the site that would become
+                                Mankessim. The establishment of the Nananom Mpow
+                                (Sacred Grove) served as the spiritual foundation
                                 for the entire Fante nation.
 
                             </p>
 
                         </div>
 
-
-                        <!-- Dot -->
-
-                        <div class="timeline-dot
-                                    absolute
-                                    left-1/2
-                                    -translate-x-1/2
-                                    w-6 h-6
-                                    rounded-full
-                                    border-4
-                                    hidden md:block">
-                        </div>
-
                     </div>
 
 
-
-                    <!-- =================================
+                    <!-- =====================================
                          TIMELINE ITEM 3
-                    ================================== -->
+                    ====================================== -->
 
-                    <div class="relative
-                                grid md:grid-cols-2
-                                gap-12
-                                items-center">
+                    <div
+                        class="flex flex-col md:flex-row items-center relative">
 
+                        <div
+                            class="md:w-1/2 md:pr-20 text-right order-2 md:order-1">
 
-                        <!-- Text -->
-
-                        <div class="text-left
-                                    md:text-right">
-
-                            <span class="text-[#A67C00]
-                                         text-3xl
-                                         font-bold">
-
+                            <span
+                                class="font-headline-md text-primary text-4xl mb-2 block">
                                 Present Day
-
                             </span>
 
-
-                            <h3 class="text-2xl
-                                       font-bold
-                                       text-[#7A1E1E]
-                                       mt-2 mb-4">
-
+                            <h4
+                                class="font-subheading-rt text-2xl font-bold text-on-surface mb-4">
                                 Capital of Tradition
+                            </h4>
 
-                            </h3>
+                            <p class="text-on-surface-variant leading-relaxed">
 
-
-                            <p class="text-gray-600
-                                      leading-8">
-
-                                Mankessim stands today as the
-                                traditional headquarters of the
-                                Fante people, a vibrant commercial
-                                hub that honors its spiritual roots
-                                through annual festivals and
-                                customary governance.
+                                Mankessim stands today as the traditional
+                                headquarters of the Fante people, a vibrant
+                                commercial hub that honors its spiritual roots
+                                through annual festivals and customary governance.
 
                             </p>
 
                         </div>
 
 
-                        <!-- Image -->
-
-                        <div class="history-card">
-
-                            <div class="w-full h-72
-                                        bg-cover
-                                        bg-center"
-                                 style="background-image:
-                                 url('https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg');">
-
-                            </div>
-
+                        <div
+                            class="z-10 bg-primary w-6 h-6 rounded-full border-4 border-background absolute left-1/2 transform -translate-x-1/2 hidden md:block">
                         </div>
 
 
-                        <!-- Dot -->
+                        <div
+                            class="md:w-1/2 md:pl-20 order-1 md:order-2 mb-8 md:mb-0">
 
-                        <div class="timeline-dot
-                                    absolute
-                                    left-1/2
-                                    -translate-x-1/2
-                                    w-6 h-6
-                                    rounded-full
-                                    border-4
-                                    hidden md:block">
+                            <div
+                                class="w-full aspect-video bg-cover bg-center shadow-2xl border-2 border-primary-container"
+                                data-alt="A wide-angle professional photograph of a colorful modern-day festival in Mankessim.">
+
+                            </div>
+
                         </div>
 
                     </div>
@@ -1184,118 +872,94 @@
         </section>
 
 
-
-        <!-- =========================================
+        <!-- =================================================
              TRADITIONAL COUNCIL
-        ========================================== -->
+        ================================================== -->
 
-        <section class="py-24 px-6 bg-white">
+        <section class="py-24 bg-surface-container">
 
-            <div class="max-w-7xl mx-auto">
+            <div
+                class="max-w-[1280px] mx-auto px-4 md:px-16">
 
+                <div
+                    class="flex flex-col md:flex-row items-end justify-between mb-16 gap-8">
 
-                <!-- Heading -->
+                    <div class="max-w-2xl">
 
-                <div class="text-center mb-16">
+                        <span
+                            class="font-label-caps text-label-caps text-secondary uppercase tracking-widest mb-2 block">
 
-                    <span class="text-[#A67C00]
-                                 uppercase
-                                 tracking-[4px]
-                                 font-semibold">
+                            Governance &amp; Authority
 
-                        GOVERNANCE & AUTHORITY
-
-                    </span>
-
-
-                    <h2 class="text-4xl md:text-5xl
-                               font-bold
-                               text-[#7A1E1E]
-                               mt-4">
-
-                        The Traditional Council
-
-                    </h2>
+                        </span>
 
 
-                    <p class="max-w-2xl
-                              mx-auto
-                              mt-6
-                              text-gray-600
-                              leading-8">
+                        <h3
+                            class="font-headline-md text-headline-md text-on-surface">
 
-                        The Council serves as the custodians of land,
-                        culture, and law, ensuring the harmony and
-                        prosperity of the Mankessim Traditional Area
-                        through ancestral wisdom and modern diplomacy.
+                            The Traditional Council
 
-                    </p>
+                        </h3>
+
+
+                        <p class="mt-4 text-on-surface-variant">
+
+                            The Council serves as the custodians of land,
+                            culture, and law, ensuring the harmony and prosperity
+                            of the Mankessim Traditional Area through ancestral
+                            wisdom and modern diplomacy.
+
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        class="border-2 border-primary text-primary font-label-caps px-8 py-3 hover:bg-primary hover:text-white transition-all duration-300">
+
+                        View Council Registry
+
+                    </button>
 
                 </div>
 
 
                 <!-- Leadership Grid -->
 
-                <div class="grid
-                            grid-cols-1
-                            md:grid-cols-3
-                            gap-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 
 
                     <!-- Paramount Chief -->
 
-                    <div class="md:col-span-2
-                                history-card
-                                relative
-                                group">
+                    <div
+                        class="md:col-span-2 relative group overflow-hidden bg-white shadow-xl border border-outline-variant">
 
-
-                        <div class="h-[500px]
-                                    bg-cover
-                                    bg-center
-                                    transition-transform
-                                    duration-700
-                                    group-hover:scale-105"
-
-                             style="background-image:
-                             url('https://tse2.mm.bing.net/th/id/OIP.CgktlLihTlNKtuaJJB_xCQHaF4?r=0&rs=1&pid=ImgDetMain&o=7&rm=3');">
+                        <div
+                            class="h-[500px] bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+                            style="background-image: url('https://tse2.mm.bing.net/th/id/OIP.CgktlLihTlNKtuaJJB_xCQHaF4?r=0&rs=1&pid=ImgDetMain&o=7&rm=3');">
                         </div>
 
 
-                        <div class="absolute
-                                    bottom-0
-                                    left-0
-                                    right-0
-                                    p-8
-                                    bg-gradient-to-t
-                                    from-black/80
-                                    to-transparent
-                                    text-white">
+                        <div
+                            class="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black/80 to-transparent text-white">
 
-                            <span class="text-xs
-                                         uppercase
-                                         tracking-[0.2em]
-                                         opacity-80">
+                            <span
+                                class="font-label-caps text-xs uppercase tracking-[0.2em] mb-2 block opacity-80">
 
                                 Omanhene of Mankessim
 
                             </span>
 
 
-                            <h3 class="text-3xl
-                                       font-bold
-                                       mt-2 mb-2">
-
+                            <h4 class="font-headline-md text-3xl mb-2">
                                 Osagyefo Amanfo Edu VI
+                            </h4>
 
-                            </h3>
 
+                            <p class="text-sm opacity-90 max-w-lg">
 
-                            <p class="text-sm opacity-90">
-
-                                Primary custodian of the Mankessim
-                                Traditional Area and President of
-                                the Traditional Council.
+                                Primary custodian of the Mankessim Traditional
+                                Area and President of the Traditional Council.
 
                             </p>
 
@@ -1304,60 +968,37 @@
                     </div>
 
 
-
                     <!-- Queen Mother -->
 
-                    <div class="history-card
-                                relative
-                                group">
+                    <div
+                        class="relative group overflow-hidden bg-white shadow-xl border border-outline-variant">
 
-
-                        <div class="h-[500px]
-                                    bg-cover
-                                    bg-center
-                                    transition-transform
-                                    duration-700
-                                    group-hover:scale-105"
-
-                             style="background-image:
-                             url('https://lh3.googleusercontent.com/aida/AP1WRLvMHyVwLqCROgyLZN3Xh90dOPaWzKtdulOrtbxWtIwOLhJYVmJo118TEJ35ExPjzkphZYYFcorldv3Or92vkZf3LQaDNlM9CPntoiEyRbV9I_EK4VtQ7d8Rxhl-WSgQznk1dRUs0VohyL2SxmXc1TK7S2LOwFQJiOqOTqQzHlJsVpB3SchD4b7_6JLnbs6D8Kx-hXYvJEhaYpLAxuc8Ex45RlK6S9OyZcZSh38ItbRV0ZNdaMHMtpRz6A');">
+                        <div
+                            class="h-full min-h-[400px] bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+                            style="background-image: url('https://lh3.googleusercontent.com/aida/AP1WRLvMHyVwLqCROgyLZN3Xh90dOPaWzKtdulOrtbxWtIwOLhJYVmJo118TEJ35ExPjzkphZYYFcorldv3Or92vkZf3LQaDNlM9CPntoiEyRbV9I_EK4VtQ7d8Rxhl-WSgQznk1dRUs0VohyL2SxmXc1TK7S2LOwFQJiOqOTqQzHlJsVpB3SchD4b7_6JLnbs6D8Kx-hXYvJEhaYpLAxuc8Ex45RlK6S9OyZcZSh38ItbRV0ZNdaMHMtpRz6A');">
                         </div>
 
 
-                        <div class="absolute
-                                    bottom-0
-                                    left-0
-                                    right-0
-                                    p-8
-                                    bg-gradient-to-t
-                                    from-black/80
-                                    to-transparent
-                                    text-white">
+                        <div
+                            class="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black/80 to-transparent text-white">
 
-                            <span class="text-xs
-                                         uppercase
-                                         tracking-[0.2em]
-                                         opacity-80">
+                            <span
+                                class="font-label-caps text-xs uppercase tracking-[0.2em] mb-2 block opacity-80">
 
                                 Omanhemaa
 
                             </span>
 
 
-                            <h3 class="text-2xl
-                                       font-bold
-                                       mt-2 mb-2">
-
+                            <h4 class="font-headline-md text-2xl mb-2">
                                 Nana Araba Otua II
-
-                            </h3>
+                            </h4>
 
 
                             <p class="text-sm opacity-90">
 
-                                The spiritual mother and advisor
-                                on all matters of tradition and
-                                social welfare.
+                                The spiritual mother and advisor on all matters
+                                of tradition and social welfare.
 
                             </p>
 
@@ -1366,163 +1007,106 @@
                     </div>
 
 
-
                     <!-- Adontenhene -->
 
-                    <div class="history-card
-                                p-8
-                                border-l-4
-                                border-[#A67C00]">
+                    <div
+                        class="bg-white p-8 border-l-4 border-primary shadow-lg">
 
-                        <span class="material-symbols-outlined
-                                     text-[#7A1E1E]
-                                     text-4xl
-                                     mb-4">
-
+                        <span
+                            class="material-symbols-outlined text-secondary text-4xl mb-4">
                             gavel
-
                         </span>
 
 
-                        <h3 class="text-xl
-                                   font-bold
-                                   text-[#7A1E1E]
-                                   mb-2">
-
+                        <h4 class="font-subheading-rt text-xl font-bold mb-2">
                             The Adontenhene
+                        </h4>
 
-                        </h3>
 
+                        <p
+                            class="text-on-surface-variant text-sm leading-relaxed mb-4">
 
-                        <p class="text-gray-600
-                                  text-sm
-                                  leading-relaxed
-                                  mb-4">
-
-                            Leader of the main body of the
-                            traditional army and key military
-                            strategist for the state.
+                            Leader of the main body of the traditional army and
+                            key military strategist for the state.
 
                         </p>
 
 
-                        <a href="#"
-                           class="text-[#A67C00]
-                                  font-bold
-                                  text-xs
-                                  uppercase
-                                  tracking-widest
-                                  hover:underline">
+                        <a
+                            class="text-primary font-bold text-xs uppercase tracking-widest hover:underline"
+                            href="#">
 
                             Learn More
 
                         </a>
 
                     </div>
-
 
 
                     <!-- Linguists -->
 
-                    <div class="history-card
-                                p-8
-                                border-l-4
-                                border-[#A67C00]">
+                    <div
+                        class="bg-white p-8 border-l-4 border-primary shadow-lg">
 
-                        <span class="material-symbols-outlined
-                                     text-[#7A1E1E]
-                                     text-4xl
-                                     mb-4">
-
+                        <span
+                            class="material-symbols-outlined text-secondary text-4xl mb-4">
                             record_voice_over
-
                         </span>
 
 
-                        <h3 class="text-xl
-                                   font-bold
-                                   text-[#7A1E1E]
-                                   mb-2">
-
+                        <h4 class="font-subheading-rt text-xl font-bold mb-2">
                             The Akyeame (Linguists)
+                        </h4>
 
-                        </h3>
 
+                        <p
+                            class="text-on-surface-variant text-sm leading-relaxed mb-4">
 
-                        <p class="text-gray-600
-                                  text-sm
-                                  leading-relaxed
-                                  mb-4">
-
-                            The eloquent masters of ceremonies
-                            and intermediaries between the people
-                            and the throne.
+                            The eloquent masters of ceremonies and intermediaries
+                            between the people and the throne.
 
                         </p>
 
 
-                        <a href="#"
-                           class="text-[#A67C00]
-                                  font-bold
-                                  text-xs
-                                  uppercase
-                                  tracking-widest
-                                  hover:underline">
+                        <a
+                            class="text-primary font-bold text-xs uppercase tracking-widest hover:underline"
+                            href="#">
 
                             Learn More
 
                         </a>
 
                     </div>
-
 
 
                     <!-- Asafo -->
 
-                    <div class="history-card
-                                p-8
-                                border-l-4
-                                border-[#A67C00]">
+                    <div
+                        class="bg-white p-8 border-l-4 border-primary shadow-lg">
 
-                        <span class="material-symbols-outlined
-                                     text-[#7A1E1E]
-                                     text-4xl
-                                     mb-4">
-
+                        <span
+                            class="material-symbols-outlined text-secondary text-4xl mb-4">
                             groups
-
                         </span>
 
 
-                        <h3 class="text-xl
-                                   font-bold
-                                   text-[#7A1E1E]
-                                   mb-2">
-
+                        <h4 class="font-subheading-rt text-xl font-bold mb-2">
                             Asafo Companies
+                        </h4>
 
-                        </h3>
 
+                        <p
+                            class="text-on-surface-variant text-sm leading-relaxed mb-4">
 
-                        <p class="text-gray-600
-                                  text-sm
-                                  leading-relaxed
-                                  mb-4">
-
-                            The traditional warrior groups
-                            responsible for community defense
-                            and civic development projects.
+                            The traditional warrior groups responsible for
+                            community defense and civic development projects.
 
                         </p>
 
 
-                        <a href="#"
-                           class="text-[#A67C00]
-                                  font-bold
-                                  text-xs
-                                  uppercase
-                                  tracking-widest
-                                  hover:underline">
+                        <a
+                            class="text-primary font-bold text-xs uppercase tracking-widest hover:underline"
+                            href="#">
 
                             Learn More
 
@@ -1537,296 +1121,188 @@
         </section>
 
 
-
-        <!-- =========================================
+        <!-- =================================================
              HISTORICAL GALLERY
-        ========================================== -->
+        ================================================== -->
 
-        <section class="py-24 px-6 bg-[#FFF8F0]">
+        <section class="py-24 px-4 md:px-16">
 
-            <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
 
+                <h3
+                    class="font-headline-md text-headline-md text-on-surface mb-2">
 
-                <!-- Heading -->
+                    The Living Archive
 
-                <div class="text-center mb-16">
-
-                    <span class="text-[#A67C00]
-                                 uppercase
-                                 tracking-[4px]
-                                 font-semibold">
-
-                        OUR ARCHIVE
-
-                    </span>
+                </h3>
 
 
-                    <h2 class="text-4xl md:text-5xl
-                               font-bold
-                               text-[#7A1E1E]
-                               mt-4 mb-4">
+                <p class="text-on-surface-variant max-w-xl mx-auto">
 
-                        The Living Archive
+                    Visual records of Mankessim's transformation through the
+                    20th century to the present day.
 
-                    </h2>
+                </p>
 
-
-                    <p class="text-gray-600
-                              max-w-xl
-                              mx-auto
-                              leading-8">
-
-                        Visual records of Mankessim's transformation
-                        through the 20th century to the present day.
-
-                    </p>
-
-                </div>
+            </div>
 
 
-                <!-- Gallery -->
-
-                <div class="grid
-                            grid-cols-2
-                            md:grid-cols-4
-                            gap-4">
+            <div
+                class="grid grid-cols-2 md:grid-cols-4 gap-4">
 
 
-                    <!-- Column 1 -->
+                <!-- Column 1 -->
 
-                    <div class="space-y-4">
+                <div class="space-y-4">
 
+                    <div class="sepia-effect overflow-hidden">
 
-                        <div class="sepia-effect overflow-hidden
-                                    rounded-xl shadow-md">
-
-                            <img
-                                class="w-full h-64 object-cover"
-
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyyQsDwkdLpnJ4wsegEWx4AE6VknpNNVs6-tx_owkh57QOzNmlkxka4tSrJMNPrFLMsLXk3R4zXgiDCyvVKMB4crIeDDyknZOz43glDxtriTV4-g1rK6uLeohcHF_XpdPWrJO14QjF-6WF7TOkdVM7lQ_anbC-WxMbAiMZBtXgtdFSQD6kVO9pdkxlh8RlHoypKOAMnVLZmDeWe8YXCoCFM6hv2PzsarsNN8Wwpedugg4GV8_wJyi3"
-
-                                alt="Vintage photograph of Mankessim">
-
-                        </div>
-
-
-                        <div class="sepia-effect overflow-hidden
-                                    rounded-xl shadow-md">
-
-                            <img
-                                class="w-full h-80 object-cover"
-
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuChlDv9D7VaXUub5GDBfVR2HwDOsmBY-Rs2rKsCoTjucx8YvJpt92uuebgvMwvIE7bJRuOtZRexUFzMRfcWikdUuMDL9hODqvkBhZ5lH6SoFkps2rQEq-6_eI5x0X9b8_JYmSzCSlHK4sZgnYdbERmr8NRFdAL9tHFoi14-aaPayoOXhaP6eOuTGgaV_K2K80xS7sd6f95WtizSz9I257kGFBc53RTU7zxrdUImWBmYMB_7_55261El"
-
-                                alt="Historical gathering of elders">
-
-                        </div>
+                        <img
+                            class="w-full h-64 object-cover"
+                            alt="Historical photograph"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyyQsDwkdLpnJ4wsegEWx4AE6VknpNNVs6-tx_owkh57QOzNmlkxka4tSrJMNPrFLMsLXk3R4zXgiDCyvVKMB4crIeDDyknZOz43glDxtriTV4-g1rK6uLeohcHF_XpdPWrJO14QjF-6WF7TOkdVM7lQ_anbC-WxMbAiMZBtXgtdFSQD6kVO9pdkxlh8RlHoypKOAMnVLZmDeWe8YXCoCFM6hv2PzsarsNN8Wwpedugg4GV8_wJyi3">
 
                     </div>
 
 
+                    <div class="sepia-effect overflow-hidden">
 
-                    <!-- Column 2 -->
-
-                    <div class="space-y-4 pt-12">
-
-
-                        <div class="sepia-effect overflow-hidden
-                                    rounded-xl shadow-md">
-
-                            <img
-                                class="w-full h-80 object-cover"
-
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQFd3HSuxG96piXNjyynxhuJ-c3JzSAhDIBc9oHPZaLHXlmL4cG6CzPydctFh3Srumj2g3pHzdjsSgjkQg5yqF_cSNxGKnijtud05u7yPa8Wx-mgV5LeZ77Torbf_OOHNxTdY2PByNi9PEPn0_oGS846VkdPaQHOsKQPO4XHId8U684oiGjQBXYc9byp1Ojgic7KURg_Zs64yJtgog7qInsV6U2_ClniQSmwQgVFymBX_6i00lOpaJ"
-
-                                alt="Traditional Adinkra symbols">
-
-                        </div>
-
-
-                        <div class="sepia-effect overflow-hidden
-                                    rounded-xl shadow-md">
-
-                            <img
-                                class="w-full h-64 object-cover"
-
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDp1mkB5CMwbaLcyFMWOMPC4q2uWTpR6Ca8zfnzr8dxnKrE_q56A4C2y1uls0CvNhJwDZELG0sRz7dwVfCMov1auVsOJxFv-sUICFxExlxmPBGlRSSHicRdNZot4hGZ8KtqG547pnqGtxWI4nFw8bhqUIeNNm9dvnjvVM9GMFyOMLIvKSZETLc0LhjuReVlm78reYM-XBFy7SM6s7YkKuC2_gzFCOBGbGtSrrT67Rf9QRYcBF5yp5Gt"
-
-                                alt="Historical durbar">
-
-                        </div>
-
-                    </div>
-
-
-
-                    <!-- Column 3 -->
-
-                    <div class="space-y-4">
-
-
-                        <div class="sepia-effect overflow-hidden
-                                    rounded-xl shadow-md">
-
-                            <img
-                                class="w-full h-64 object-cover"
-
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCamFvjnjNfre033xyM0aZF8NuVzTMwn8AHwFH0rnShJPkXbytTTc8AnQ8yR-Gc6rbPM0NLnl22_UStFfwnU1TQFPW-WP2ova118I8mKa9CXfYl6DuWNZVREYVSDndb6DVAhf1t6jaF9Ad6APtPhiqstnZmc-OFrtu_-rJdB98UR_jIc8lwB_oodxULlwFAA_TWj6Hvv8wm4sdVNJBptwXktm7afCVl0acnxf7MaWm7SlHISWpoT1VX"
-
-                                alt="Young Fante girl in traditional dress">
-
-                        </div>
-
-
-                        <div class="sepia-effect overflow-hidden
-                                    rounded-xl shadow-md">
-
-                            <img
-                                class="w-full h-80 object-cover"
-
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7TQRebiPGSaYEUISXyueeG5S0N5CGPzfIb9OOBekoxjvLYE8IfzYaC8Yq-70mNBLn6_10pUmNjhcyBMI1auIDud98kBov0U6MEmBHFnlfxe97srrunHHbu6VeRV9aCwl57DuEiQyJ2K0Tkt2gTQfPvX123DU4rdyZqWS9hFGoa7o6YKzwv2T-X51zeqLvEbbh8R5YFY3kxg7I1AYDJvUk95osFeEECWcdrIlhvrqmXgxr0ek8PYjU"
-
-                                alt="Mankessim market">
-
-                        </div>
-
-                    </div>
-
-
-
-                    <!-- Column 4 -->
-
-                    <div class="space-y-4 pt-12">
-
-
-                        <div class="sepia-effect overflow-hidden
-                                    rounded-xl shadow-md">
-
-                            <img
-                                class="w-full h-80 object-cover"
-
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyyQsDwkdLpnJ4wsegEWx4AE6VknpNNVs6-tx_owkh57QOzNmlkxka4tSrJMNPrFLMsLXk3R4zXgiDCyvVKMB4crIeDDyknZOz43glDxtriTV4-g1rK6uLeohcHF_XpdPWrJO14QjF-6WF7TOkdVM7lQ_anbC-WxMbAiMZBtXgtdFSQD6kVO9pdkxlh8RlHoypKOAMnVLZmDeWe8YXCoCFM6hv2PzsarsNN8Wwpedugg4GV8_wJyi3"
-
-                                alt="Nananom Mpow Sacred Grove">
-
-                        </div>
-
-
-                        <div class="sepia-effect overflow-hidden
-                                    rounded-xl shadow-md">
-
-                            <img
-                                class="w-full h-64 object-cover"
-
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuChlDv9D7VaXUub5GDBfVR2HwDOsmBY-Rs2rKsCoTjucx8YvJpt92uuebgvMwvIE7bJRuOtZRexUFzMRfcWikdUuMDL9hODqvkBhZ5lH6SoFkps2rQEq-6_eI5x0X9b8_JYmSzCSlHK4sZgnYdbERmr8NRFdAL9tHFoi14-aaPayoOXhaP6eOuTGgaV_K2K80xS7sd6f95WtizSz9I257kGFBc53RTU7zxrdUImWBmYMB_7_55261El"
-
-                                alt="Traditional drummer">
-
-                        </div>
+                        <img
+                            class="w-full h-80 object-cover"
+                            alt="Historical photograph"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuChlDv9D7VaXUub5GDBfVR2HwDOsmBY-Rs2rKsCoTjucx8YvJpt92uuebgvMwvIE7bJRuOtZRexUFzMRfcWikdUuMDL9hODqvkBhZ5lH6SoFkps2rQEq-6_eI5x0X9b8_JYmSzCSlHK4sZgnYdbERmr8NRFdAL9tHFoi14-aaPayoOXhaP6eOuTGgaV_K2K80xS7sd6f95WtizSz9I257kGFBc53RTU7zxrdUImWBmYMB_7_55261El">
 
                     </div>
 
                 </div>
 
 
-                <!-- Load More -->
+                <!-- Column 2 -->
 
-                <div class="mt-16 text-center">
+                <div class="space-y-4 pt-12">
 
-                    <button
-                        class="bg-[#7A1E1E]
-                               text-white
-                               px-8 py-4
-                               rounded-xl
-                               font-semibold
-                               hover:bg-[#5F1717]
-                               transition">
+                    <div class="sepia-effect overflow-hidden">
 
-                        Load More From Archive
+                        <img
+                            class="w-full h-80 object-cover"
+                            alt="Traditional Adinkra symbols"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQFd3HSuxG96piXNjyynxhuJ-c3JzSAhDIBc9oHPZaLHXlmL4cG6CzPydctFh3Srumj2g3pHzdjsSgjkQg5yqF_cSNxGKnijtud05u7yPa8Wx-mgV5LeZ77Torbf_OOHNxTdY2PByNi9PEPn0_oGS846VkdPaQHOsKQPO4XHId8U684oiGjQBXYc9byp1Ojgic7KURg_Zs64yJtgog7qInsV6U2_ClniQSmwQgVFymBX_6i00lOpaJ">
 
-                    </button>
+                    </div>
+
+
+                    <div class="sepia-effect overflow-hidden">
+
+                        <img
+                            class="w-full h-64 object-cover"
+                            alt="Historical durbar"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDp1mkB5CMwbaLcyFMWOMPC4q2uWTpR6Ca8zfnzr8dxnKrE_q56A4C2y1uls0CvNhJwDZELG0sRz7dwVfCMov1auVsOJxFv-sUICFxExlxmPBGlRSSHicRdNZot4hGZ8KtqG547pnqGtxWI4nFw8bhqUIeNNm9dvnjvVM9GMFyOMLIvKSZETLc0LhjuReVlm78reYM-XBFy7SM6s7YkKuC2_gzFCOBGbGtSrrT67Rf9QRYcBF5yp5Gt">
+
+                    </div>
 
                 </div>
+
+
+                <!-- Column 3 -->
+
+                <div class="space-y-4">
+
+                    <div class="sepia-effect overflow-hidden">
+
+                        <img
+                            class="w-full h-64 object-cover"
+                            alt="Traditional Fante girl"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCamFvjnjNfre033xyM0aZF8NuVzTMwn8AHwFH0rnShJPkXbytTTc8AnQ8yR-Gc6rbPM0NLnl22_UStFfwnU1TQFPW-WP2ova118I8mKa9CXfYl6DuWNZVREYVSDndb6DVAhf1t6jaF9Ad6APtPhiqstnZmc-OFrtu_-rJdB98UR_jIc8lwB_oodxULlwFAA_TWj6Hvv8wm4sdVNJBptwXktm7afCVl0acnxf7MaWm7SlHISWpoT1VX">
+
+                    </div>
+
+
+                    <div class="sepia-effect overflow-hidden">
+
+                        <img
+                            class="w-full h-80 object-cover"
+                            alt="Historical Mankessim market"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7TQRebiPGSaYEUISXyueeG5S0N5CGPzfIb9OOBekoxjvLYE8IfzYaC8Yq-70mNBLn6_10pUmNjhcyBMI1auIDud98kBov0U6MEmBHFnlfxe97srrunHHbu6VeRV9aCwl57DuEiQyJ2K0Tkt2gTQfPvX123DU4rdyZqWS9hFGoa7o6YKzwv2T-X51zeqLvEbbh8R5YFY3kxg7I1AYDJvUk95osFeEECWcdrIlhvrqmXgxr0ek8PYjU">
+
+                    </div>
+
+                </div>
+
+
+                <!-- Column 4 -->
+
+                <div class="space-y-4 pt-12">
+
+                    <div class="sepia-effect overflow-hidden">
+
+                        <img
+                            class="w-full h-80 object-cover"
+                            alt="Nananom Mpow Sacred Grove"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyyQsDwkdLpnJ4wsegEWx4AE6VknpNNVs6-tx_owkh57QOzNmlkxka4tSrJMNPrFLMsLXk3R4zXgiDCyvVKMB4crIeDDyknZOz43glDxtriTV4-g1rK6uLeohcHF_XpdPWrJO14QjF-6WF7TOkdVM7lQ_anbC-WxMbAiMZBtXgtdFSQD6kVO9pdkxlh8RlHoypKOAMnVLZmDeWe8YXCoCFM6hv2PzsarsNN8Wwpedugg4GV8_wJyi3">
+
+                    </div>
+
+
+                    <div class="sepia-effect overflow-hidden">
+
+                        <img
+                            class="w-full h-64 object-cover"
+                            alt="Traditional drummer"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuChlDv9D7VaXUub5GDBfVR2HwDOsmBY-Rs2rKsCoTjucx8YvJpt92uuebgvMwvIE7bJRuOtZRexUFzMRfcWikdUuMDL9hODqvkBhZ5lH6SoFkps2rQEq-6_eI5x0X9b8_JYmSzCSlHK4sZgnYdbERmr8NRFdAL9tHFoi14-aaPayoOXhaP6eOuTGgaV_K2K80xS7sd6f95WtizSz9I257kGFBc53RTU7zxrdUImWBmYMB_7_55261El">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="mt-16 text-center">
+
+                <button
+                    class="bg-surface-container-high text-on-surface font-label-caps px-8 py-3 hover:bg-primary-container hover:text-on-primary-container transition-colors">
+
+                    Load More From Archive
+
+                </button>
 
             </div>
 
         </section>
 
 
-
-        <!-- =========================================
+        <!-- =================================================
              NEWSLETTER
-        ========================================== -->
+        ================================================== -->
 
-        <section class="py-24 bg-[#7A1E1E]
-                        text-white text-center">
+        <section class="py-24 bg-primary text-on-primary text-center">
 
-            <div class="max-w-3xl
-                        mx-auto
-                        px-6">
+            <div class="max-w-2xl mx-auto px-4">
 
-
-                <span class="text-[#C9A227]
-                             uppercase
-                             tracking-[4px]
-                             font-semibold">
-
-                    STAY CONNECTED
-
-                </span>
-
-
-                <h2 class="text-4xl
-                           font-bold
-                           mt-4 mb-5">
-
+                <h3 class="font-headline-md text-3xl mb-4">
                     Preserve the Legacy
+                </h3>
 
-                </h2>
 
+                <p class="opacity-80 mb-10">
 
-                <p class="text-white/80
-                          leading-8
-                          mb-10">
-
-                    Join our mailing list to receive quarterly
-                    updates on historical research, festival dates,
-                    and traditional council announcements.
+                    Join our mailing list to receive quarterly updates on
+                    historical research, festival dates, and traditional
+                    council announcements.
 
                 </p>
 
 
-                <form class="flex
-                             flex-col
-                             md:flex-row
-                             gap-4">
-
+                <form class="flex flex-col md:flex-row gap-4">
 
                     <input
-                        class="flex-grow
-                               px-6 py-4
-                               rounded-xl
-                               bg-white
-                               text-gray-800
-                               border-none
-                               focus:outline-none
-                               focus:ring-2
-                               focus:ring-[#C9A227]"
-
+                        class="flex-grow px-6 py-4 bg-white/10 border border-white/20 text-white placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-primary-fixed"
                         placeholder="Your email address"
-
                         type="email">
 
 
                     <button
-                        class="bg-[#C9A227]
-                               text-white
-                               px-8 py-4
-                               rounded-xl
-                               font-semibold
-                               hover:bg-[#A67C00]
-                               transition"
-
+                        class="bg-primary-fixed text-on-primary-fixed font-label-caps px-8 py-4 hover:bg-white transition-colors"
                         type="submit">
 
                         Subscribe
@@ -1842,172 +1318,110 @@
     </main>
 
 
-
-    <!-- =========================================
+    <!-- =====================================================
          FOOTER
-    ========================================== -->
+    ====================================================== -->
 
-    <footer class="w-full
-                   py-12
-                   px-6
-                   bg-[#FFF8F0]
-                   border-t-2
-                   border-[#A67C00]">
+    <footer
+        class="w-full py-12 px-4 md:px-16 flex flex-col md:flex-row justify-between items-center gap-8 bg-surface-container-highest border-t-2 border-primary">
 
+        <div class="flex flex-col items-center md:items-start">
 
-        <div class="max-w-7xl
-                    mx-auto
-                    flex
-                    flex-col
-                    md:flex-row
-                    justify-between
-                    items-center
-                    gap-8">
+            <h5
+                class="font-label-caps text-label-caps text-secondary font-bold mb-2">
+
+                MANKESSIM PORTAL
+
+            </h5>
 
 
-            <!-- Copyright -->
+            <p
+                class="font-body-md text-body-md text-on-surface-variant text-center md:text-left">
 
-            <div class="flex
-                        flex-col
-                        items-center
-                        md:items-start">
+                © 2024 Mankessim Traditional Council. All Rights Reserved.
 
-                <h5 class="text-[#7A1E1E]
-                           font-bold
-                           tracking-widest
-                           text-sm
-                           mb-2">
+            </p>
 
-                    MANKESSIM HERITAGE
-
-                </h5>
+        </div>
 
 
-                <p class="text-gray-600
-                          text-sm
-                          text-center
-                          md:text-left">
+        <div class="flex flex-wrap justify-center gap-8">
 
-                    © 2024 Mankessim Traditional Council.
-                    All Rights Reserved.
+            <a
+                class="text-on-surface-variant font-body-md hover:underline decoration-primary underline-offset-4"
+                href="#">
 
-                </p>
+                Emergency Contacts
 
-            </div>
+            </a>
 
 
-            <!-- Links -->
+            <a
+                class="text-on-surface-variant font-body-md hover:underline decoration-primary underline-offset-4"
+                href="#">
 
-            <div class="flex
-                        flex-wrap
-                        justify-center
-                        gap-6">
+                Traditional Council
 
-
-                <a href="#"
-                   class="text-gray-600
-                          hover:text-[#7A1E1E]
-                          transition">
-
-                    Emergency Contacts
-
-                </a>
+            </a>
 
 
-                <a href="#"
-                   class="text-gray-600
-                          hover:text-[#7A1E1E]
-                          transition">
+            <a
+                class="text-on-surface-variant font-body-md hover:underline decoration-primary underline-offset-4"
+                href="#">
 
-                    Traditional Council
+                Contact Us
 
-                </a>
-
-
-                <a href="#"
-                   class="text-gray-600
-                          hover:text-[#7A1E1E]
-                          transition">
-
-                    Contact Us
-
-                </a>
+            </a>
 
 
-                <a href="#"
-                   class="text-gray-600
-                          hover:text-[#7A1E1E]
-                          transition">
+            <a
+                class="text-on-surface-variant font-body-md hover:underline decoration-primary underline-offset-4"
+                href="#">
 
-                    Privacy Policy
+                Privacy Policy
 
-                </a>
+            </a>
 
-            </div>
-
-
-            <!-- Social Icons -->
-
-            <div class="flex gap-4">
-
-                <span
-                    class="material-symbols-outlined
-                           text-[#7A1E1E]
-                           cursor-pointer
-                           hover:scale-110
-                           transition-transform">
-
-                    face_nod
-
-                </span>
+        </div>
 
 
-                <span
-                    class="material-symbols-outlined
-                           text-[#7A1E1E]
-                           cursor-pointer
-                           hover:scale-110
-                           transition-transform">
+        <div class="flex gap-4">
 
-                    public
+            <span
+                class="material-symbols-outlined text-secondary cursor-pointer hover:scale-110 transition-transform">
 
-                </span>
+                face_nod
 
-            </div>
+            </span>
+
+
+            <span
+                class="material-symbols-outlined text-secondary cursor-pointer hover:scale-110 transition-transform">
+
+                public
+
+            </span>
 
         </div>
 
     </footer>
 
 
-
-    <!-- =========================================
+    <!-- =====================================================
          MOBILE BOTTOM NAVIGATION
-    ========================================== -->
+    ====================================================== -->
 
     <nav
-        class="fixed
-               bottom-0
-               left-0
-               w-full
-               bg-white
-               border-t
-               shadow-lg
-               md:hidden
-               z-40">
-
+        class="fixed bottom-0 left-0 w-full bg-white border-t shadow-lg md:hidden z-40">
 
         <div class="grid grid-cols-5 h-16">
 
 
             <!-- HOME -->
 
-            <a href="index.html"
-               class="bottom-nav
-                      flex
-                      flex-col
-                      justify-center
-                      items-center">
+            <a
+                href="index.html"
+                class="bottom-nav flex flex-col justify-center items-center">
 
                 <span class="material-symbols-outlined">
                     home
@@ -2022,12 +1436,9 @@
 
             <!-- HISTORY -->
 
-            <a href="history.html"
-               class="bottom-nav active
-                      flex
-                      flex-col
-                      justify-center
-                      items-center">
+            <a
+                href="history.html"
+                class="bottom-nav active flex flex-col justify-center items-center">
 
                 <span class="material-symbols-outlined">
                     history_edu
@@ -2042,12 +1453,9 @@
 
             <!-- COMMUNITIES -->
 
-            <a href="communities.html"
-               class="bottom-nav
-                      flex
-                      flex-col
-                      justify-center
-                      items-center">
+            <a
+                href="communities.html"
+                class="bottom-nav flex flex-col justify-center items-center">
 
                 <span class="material-symbols-outlined">
                     groups
@@ -2062,12 +1470,9 @@
 
             <!-- TOURISM -->
 
-            <a href="tourism.html"
-               class="bottom-nav
-                      flex
-                      flex-col
-                      justify-center
-                      items-center">
+            <a
+                href="tourism.html"
+                class="bottom-nav flex flex-col justify-center items-center">
 
                 <span class="material-symbols-outlined">
                     travel_explore
@@ -2084,11 +1489,7 @@
 
             <button
                 id="moreButton"
-                class="bottom-nav
-                       flex
-                       flex-col
-                       justify-center
-                       items-center">
+                class="bottom-nav flex flex-col justify-center items-center">
 
                 <span class="material-symbols-outlined">
                     apps
@@ -2105,49 +1506,25 @@
     </nav>
 
 
-
-    <!-- =========================================
+    <!-- =====================================================
          MORE SHEET
-    ========================================== -->
+    ====================================================== -->
 
     <div
         id="moreSheet"
-        class="fixed
-               inset-0
-               bg-black/40
-               hidden
-               z-[999]">
-
+        class="fixed inset-0 bg-black/40 hidden z-[999]">
 
         <div
             id="sheetPanel"
-            class="absolute
-                   bottom-0
-                   left-0
-                   w-full
-                   bg-white
-                   rounded-t-3xl
-                   p-6
-                   translate-y-full
-                   transition-transform
-                   duration-300">
+            class="absolute bottom-0 left-0 w-full bg-white rounded-t-3xl p-6 translate-y-full transition-transform duration-300">
 
-
-            <!-- Handle -->
-
-            <div class="w-16 h-1.5
-                        rounded-full
-                        bg-gray-300
-                        mx-auto
-                        mb-6">
+            <div
+                class="w-16 h-1.5 rounded-full bg-gray-300 mx-auto mb-6">
             </div>
 
 
-            <h2 class="text-2xl
-                       font-bold
-                       text-center
-                       text-[#7A1E1E]
-                       mb-8">
+            <h2
+                class="text-2xl font-bold text-center text-[#7A1E1E] mb-8">
 
                 Explore Mankessim
 
@@ -2157,10 +1534,7 @@
             <div class="grid grid-cols-2 gap-4">
 
 
-                <!-- Culture -->
-
-                <a href="#"
-                   class="menu-card">
+                <a href="#" class="menu-card">
 
                     <span class="material-symbols-outlined text-4xl">
                         museum
@@ -2171,10 +1545,7 @@
                 </a>
 
 
-                <!-- Festivals -->
-
-                <a href="#"
-                   class="menu-card">
+                <a href="#" class="menu-card">
 
                     <span class="material-symbols-outlined text-4xl">
                         event
@@ -2185,10 +1556,7 @@
                 </a>
 
 
-                <!-- Gallery -->
-
-                <a href="#"
-                   class="menu-card">
+                <a href="#" class="menu-card">
 
                     <span class="material-symbols-outlined text-4xl">
                         photo_library
@@ -2199,10 +1567,7 @@
                 </a>
 
 
-                <!-- Map -->
-
-                <a href="#"
-                   class="menu-card">
+                <a href="#" class="menu-card">
 
                     <span class="material-symbols-outlined text-4xl">
                         map
@@ -2213,10 +1578,7 @@
                 </a>
 
 
-                <!-- Contacts -->
-
-                <a href="#"
-                   class="menu-card">
+                <a href="#" class="menu-card">
 
                     <span class="material-symbols-outlined text-4xl">
                         call
@@ -2227,10 +1589,7 @@
                 </a>
 
 
-                <!-- About -->
-
-                <a href="history.html"
-                   class="menu-card">
+                <a href="history.html" class="menu-card">
 
                     <span class="material-symbols-outlined text-4xl">
                         info
@@ -2247,40 +1606,30 @@
     </div>
 
 
-
-    <!-- =========================================
+    <!-- =====================================================
          JAVASCRIPT
-    ========================================== -->
-
+    ====================================================== -->
 
     <script>
 
-        /* ========================================
+        /* =================================================
            DRAWER
-        ======================================== */
+        ================================================== */
 
-        const menuButton =
-            document.getElementById("menuButton");
-
-        const drawer =
-            document.getElementById("nav-drawer");
-
-        const overlay =
-            document.getElementById("drawer-overlay");
+        const menuButton = document.getElementById("menuButton");
+        const drawer = document.getElementById("nav-drawer");
+        const overlay = document.getElementById("drawer-overlay");
 
 
         function openDrawer() {
 
             drawer.classList.remove("-translate-x-full");
-
             drawer.classList.add("translate-x-0");
 
             overlay.classList.remove("hidden");
 
             setTimeout(() => {
-
                 overlay.classList.add("opacity-100");
-
             }, 10);
 
         }
@@ -2289,139 +1638,116 @@
         function closeDrawer() {
 
             drawer.classList.remove("translate-x-0");
-
             drawer.classList.add("-translate-x-full");
 
             overlay.classList.remove("opacity-100");
 
             setTimeout(() => {
-
                 overlay.classList.add("hidden");
+            }, 300);
+
+        }
+
+
+        menuButton.addEventListener("click", openDrawer);
+
+        overlay.addEventListener("click", closeDrawer);
+
+
+        /* =================================================
+           CLOSE DRAWER WHEN LINK IS CLICKED
+        ================================================== */
+
+        drawer.querySelectorAll("a").forEach(link => {
+
+            link.addEventListener("click", () => {
+                closeDrawer();
+            });
+
+        });
+
+
+        /* =================================================
+           MORE SHEET
+        ================================================== */
+
+        const moreButton = document.getElementById("moreButton");
+        const moreSheet = document.getElementById("moreSheet");
+        const sheetPanel = document.getElementById("sheetPanel");
+
+
+        moreButton.addEventListener("click", () => {
+
+            moreSheet.classList.remove("hidden");
+
+            setTimeout(() => {
+
+                sheetPanel.classList.remove("translate-y-full");
+
+            }, 10);
+
+        });
+
+
+        function closeMoreSheet() {
+
+            sheetPanel.classList.add("translate-y-full");
+
+            setTimeout(() => {
+
+                moreSheet.classList.add("hidden");
 
             }, 300);
 
         }
 
 
-        menuButton.addEventListener(
-            "click",
-            openDrawer
-        );
+        moreSheet.addEventListener("click", (event) => {
 
+            if (event.target === moreSheet) {
 
-        overlay.addEventListener(
-            "click",
-            closeDrawer
-        );
-
-
-
-        /* ========================================
-           MORE SHEET
-        ======================================== */
-
-        const moreButton =
-            document.getElementById("moreButton");
-
-        const moreSheet =
-            document.getElementById("moreSheet");
-
-        const sheetPanel =
-            document.getElementById("sheetPanel");
-
-
-        moreButton.addEventListener(
-            "click",
-            () => {
-
-                moreSheet.classList.remove("hidden");
-
-                setTimeout(() => {
-
-                    sheetPanel.classList.remove(
-                        "translate-y-full"
-                    );
-
-                }, 10);
+                closeMoreSheet();
 
             }
-        );
+
+        });
 
 
-        moreSheet.addEventListener(
-            "click",
-            (event) => {
-
-                if (event.target === moreSheet) {
-
-                    sheetPanel.classList.add(
-                        "translate-y-full"
-                    );
-
-                    setTimeout(() => {
-
-                        moreSheet.classList.add(
-                            "hidden"
-                        );
-
-                    }, 300);
-
-                }
-
-            }
-        );
-
-
-
-        /* ========================================
+        /* =================================================
            HEADER SHADOW ON SCROLL
-        ======================================== */
+        ================================================== */
 
-        window.addEventListener(
-            "scroll",
-            () => {
+        window.addEventListener("scroll", () => {
 
-                const header =
-                    document.querySelector("header");
+            const header = document.querySelector("header");
 
+            if (window.scrollY > 50) {
 
-                if (window.scrollY > 50) {
+                header.classList.add("shadow-md");
+                header.classList.remove("shadow-sm");
 
-                    header.classList.add("shadow-md");
+            } else {
 
-                    header.classList.remove(
-                        "shadow-sm"
-                    );
-
-                } else {
-
-                    header.classList.remove(
-                        "shadow-md"
-                    );
-
-                    header.classList.add(
-                        "shadow-sm"
-                    );
-
-                }
+                header.classList.remove("shadow-md");
+                header.classList.add("shadow-sm");
 
             }
-        );
+
+        });
 
     </script>
 
 
-    <!-- =========================================
-         PWA INSTALL
-    ========================================== -->
+    <!-- =====================================================
+         INSTALL SCRIPT
+    ====================================================== -->
 
     <script src="js/install.js"></script>
 
+    <!-- Service worker registration intentionally left
+         commented as in your original file. -->
 
-    <!--
-    <script src="js/sw-register.js"></script>
-    -->
-
+    <!-- <script src="js/sw-register.js"></script> -->
 
 </body>
 
