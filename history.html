@@ -218,9 +218,11 @@
         ================================================== */
 
         .adinkra-pattern {
-            background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
-            opacity: 0.08;
-        }
+    background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+    background-repeat: repeat;
+    background-size: 300px 300px;
+    opacity: 0.12;
+}
 
         /* =================================================
            TIMELINE
@@ -667,210 +669,235 @@
              INTERACTIVE TIMELINE
         ================================================== -->
 
-        <section
-            class="relative py-24 px-4 md:px-16 max-w-[1280px] mx-auto overflow-hidden">
+        <!-- =========================
+     HISTORICAL TIMELINE
+========================= -->
+<section class="relative py-24 md:py-32 overflow-hidden bg-[#FFF3DB]">
 
-            <!-- ORIGINAL HERITAGE BACKGROUND -->
+    <!-- Heritage Background -->
+    <div class="absolute inset-0 pointer-events-none">
 
-            <div
-                class="absolute inset-0 adinkra-pattern pointer-events-none">
+        <!-- Adinkra pattern -->
+        <div class="absolute inset-0 adinkra-pattern"></div>
+
+        <!-- Soft decorative gradients -->
+        <div class="absolute top-0 left-0 w-96 h-96 bg-[#C9A227]/10 rounded-full blur-3xl"></div>
+
+        <div class="absolute bottom-0 right-0 w-96 h-96 bg-[#7A1E1E]/10 rounded-full blur-3xl"></div>
+
+        <!-- Decorative vertical glow -->
+        <div class="absolute left-1/2 top-0 bottom-0 w-32 -translate-x-1/2 bg-[#C9A227]/5 blur-2xl"></div>
+
+    </div>
+
+    <div class="relative max-w-7xl mx-auto px-6 md:px-16">
+
+        <!-- Section Heading -->
+        <div class="text-center mb-20 md:mb-28">
+
+            <div class="flex justify-center mb-5">
+                <span class="material-symbols-outlined text-[#755b00] text-5xl">
+                    history_edu
+                </span>
+            </div>
+
+            <p class="uppercase tracking-[4px] text-[#A33C39] font-semibold text-sm mb-3">
+                Our Journey
+            </p>
+
+            <h3 class="font-display text-4xl md:text-5xl font-bold text-[#2B1611] mb-5">
+                Legacy Through Ages
+            </h3>
+
+            <div class="h-1 w-24 bg-[#755b00] mx-auto"></div>
+
+            <p class="max-w-2xl mx-auto mt-6 text-[#4D4635] leading-8">
+                Follow the journey of the Fante people from their migration
+                from Techiman to the establishment and continued development
+                of Mankessim.
+            </p>
+
+        </div>
+
+
+        <!-- Timeline -->
+        <div class="relative">
+
+            <!-- Central Timeline Line -->
+            <div class="hidden md:block absolute left-1/2 top-0 bottom-0
+                        w-1 -translate-x-1/2
+                        bg-gradient-to-b from-[#C9A227] via-[#755b00] to-[#A33C39]
+                        rounded-full shadow-sm">
             </div>
 
 
-            <!-- Timeline Content -->
+            <!-- =========================
+                 TIMELINE ITEM 1
+            ========================= -->
+            <div class="relative grid md:grid-cols-2 gap-10 md:gap-20 items-center mb-24 md:mb-32">
 
-            <div class="relative z-10">
+                <!-- Text -->
+                <div class="md:text-right">
 
-                <!-- Timeline Heading -->
+                    <span class="font-display text-[#755b00] text-3xl md:text-4xl font-bold block mb-3">
+                        13th Century
+                    </span>
 
-                <div class="text-center mb-24">
+                    <h4 class="font-serif text-2xl md:text-3xl font-bold text-[#2B1611] mb-4">
+                        Departure from Techiman
+                    </h4>
 
-                    <div class="flex justify-center mb-4">
+                    <p class="text-[#4D4635] leading-8">
+                        The Fante people begin their historic migration
+                        southwards, led by the spiritual guidance of the
+                        three great patriarchs, escaping conflict and
+                        searching for a permanent home.
+                    </p>
 
-                        <span class="material-symbols-outlined text-primary text-4xl">
-                            history_edu
-                        </span>
+                </div>
+
+
+                <!-- Image -->
+                <div>
+                    <div class="relative overflow-hidden shadow-2xl
+                                border-4 border-white
+                                bg-[#FFF8F0]">
+
+                        <img
+                            src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg"
+                            alt="Artistic representation of the migration of the Fante people"
+                            class="w-full aspect-video object-cover">
 
                     </div>
+                </div>
 
 
-                    <h3 class="font-headline-md text-headline-md text-on-surface mb-4">
-                        Legacy Through Ages
-                    </h3>
+                <!-- Timeline Dot -->
+                <div class="hidden md:flex absolute left-1/2 top-1/2
+                            -translate-x-1/2 -translate-y-1/2
+                            w-8 h-8 rounded-full
+                            bg-[#755b00]
+                            border-8 border-[#FFF3DB]
+                            shadow-lg">
+                </div>
+
+            </div>
 
 
-                    <div class="h-1 w-24 bg-primary mx-auto">
+            <!-- =========================
+                 TIMELINE ITEM 2
+            ========================= -->
+            <div class="relative grid md:grid-cols-2 gap-10 md:gap-20 items-center mb-24 md:mb-32">
+
+                <!-- Image -->
+                <div class="md:order-1">
+
+                    <div class="relative overflow-hidden shadow-2xl
+                                border-4 border-white
+                                bg-[#FFF8F0]">
+
+                        <img
+                            src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg"
+                            alt="Sacred grove representing the establishment of Mankessim"
+                            class="w-full aspect-video object-cover">
+
                     </div>
 
                 </div>
 
 
-                <!-- Central Line -->
+                <!-- Text -->
+                <div class="md:order-2">
 
-                <div class="relative">
+                    <span class="font-display text-[#755b00] text-3xl md:text-4xl font-bold block mb-3">
+                        The Settlement
+                    </span>
 
-                    <div
-                        class="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 timeline-line hidden md:block">
-                    </div>
+                    <h4 class="font-serif text-2xl md:text-3xl font-bold text-[#2B1611] mb-4">
+                        Discovery of the Sacred Grove
+                    </h4>
 
+                    <p class="text-[#4D4635] leading-8">
+                        The arrival at the site that would become Mankessim.
+                        The establishment of the Nananom Mpow Sacred Grove
+                        served as the spiritual foundation for the entire
+                        Fante nation.
+                    </p>
 
-                    <!-- =====================================
-                         TIMELINE ITEM 1
-                    ====================================== -->
-
-                    <div class="flex flex-col md:flex-row items-center mb-32 relative">
-
-                        <div
-                            class="md:w-1/2 md:pr-20 text-right order-2 md:order-1">
-
-                            <span
-                                class="font-headline-md text-primary text-4xl mb-2 block">
-                                13th Century
-                            </span>
-
-                            <h4
-                                class="font-subheading-rt text-2xl font-bold text-on-surface mb-4">
-                                Departure from Techiman
-                            </h4>
-
-                            <p class="text-on-surface-variant leading-relaxed">
-
-                                The Fante people begin their historic migration
-                                southwards, led by the spiritual guidance of
-                                the three great patriarchs escaping conflict
-                                and searching for a permanent home.
-
-                            </p>
-
-                        </div>
+                </div>
 
 
-                        <div
-                            class="z-10 bg-primary w-6 h-6 rounded-full border-4 border-background absolute left-1/2 transform -translate-x-1/2 hidden md:block">
-                        </div>
+                <!-- Timeline Dot -->
+                <div class="hidden md:flex absolute left-1/2 top-1/2
+                            -translate-x-1/2 -translate-y-1/2
+                            w-8 h-8 rounded-full
+                            bg-[#755b00]
+                            border-8 border-[#FFF3DB]
+                            shadow-lg">
+                </div>
+
+            </div>
 
 
-                        <div
-                            class="md:w-1/2 md:pl-20 order-1 md:order-2 mb-8 md:mb-0">
+            <!-- =========================
+                 TIMELINE ITEM 3
+            ========================= -->
+            <div class="relative grid md:grid-cols-2 gap-10 md:gap-20 items-center">
 
-                            <div
-                                class="w-full aspect-video bg-cover bg-center shadow-2xl border-2 border-primary-container"
-                                data-alt="An artistic digital painting of a group of ancient West African travelers moving through a savanna landscape at sunset.">
+                <!-- Text -->
+                <div class="md:text-right">
 
-                            </div>
+                    <span class="font-display text-[#755b00] text-3xl md:text-4xl font-bold block mb-3">
+                        Present Day
+                    </span>
 
-                        </div>
+                    <h4 class="font-serif text-2xl md:text-3xl font-bold text-[#2B1611] mb-4">
+                        Capital of Tradition
+                    </h4>
 
-                    </div>
+                    <p class="text-[#4D4635] leading-8">
+                        Mankessim stands today as the traditional headquarters
+                        of the Fante people, a vibrant commercial hub that
+                        honors its spiritual roots through annual festivals
+                        and customary governance.
+                    </p>
 
-
-                    <!-- =====================================
-                         TIMELINE ITEM 2
-                    ====================================== -->
-
-                    <div
-                        class="flex flex-col md:flex-row items-center mb-32 relative">
-
-                        <div
-                            class="md:w-1/2 md:pr-20 mb-8 md:mb-0">
-
-                            <div
-                                class="w-full aspect-video bg-cover bg-center shadow-2xl border-2 border-primary-container"
-                                data-alt="A detailed close-up of an ancient ceremonial brass bowl sitting on a stone altar in a sacred grove.">
-
-                            </div>
-
-                        </div>
+                </div>
 
 
-                        <div
-                            class="z-10 bg-primary w-6 h-6 rounded-full border-4 border-background absolute left-1/2 transform -translate-x-1/2 hidden md:block">
-                        </div>
+                <!-- Image -->
+                <div>
 
+                    <div class="relative overflow-hidden shadow-2xl
+                                border-4 border-white
+                                bg-[#FFF8F0]">
 
-                        <div
-                            class="md:w-1/2 md:pl-20 text-left">
-
-                            <span
-                                class="font-headline-md text-primary text-4xl mb-2 block">
-                                The Settlement
-                            </span>
-
-                            <h4
-                                class="font-subheading-rt text-2xl font-bold text-on-surface mb-4">
-                                Discovery of the Sacred Grove
-                            </h4>
-
-                            <p class="text-on-surface-variant leading-relaxed">
-
-                                The arrival at the site that would become
-                                Mankessim. The establishment of the Nananom Mpow
-                                (Sacred Grove) served as the spiritual foundation
-                                for the entire Fante nation.
-
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- =====================================
-                         TIMELINE ITEM 3
-                    ====================================== -->
-
-                    <div
-                        class="flex flex-col md:flex-row items-center relative">
-
-                        <div
-                            class="md:w-1/2 md:pr-20 text-right order-2 md:order-1">
-
-                            <span
-                                class="font-headline-md text-primary text-4xl mb-2 block">
-                                Present Day
-                            </span>
-
-                            <h4
-                                class="font-subheading-rt text-2xl font-bold text-on-surface mb-4">
-                                Capital of Tradition
-                            </h4>
-
-                            <p class="text-on-surface-variant leading-relaxed">
-
-                                Mankessim stands today as the traditional
-                                headquarters of the Fante people, a vibrant
-                                commercial hub that honors its spiritual roots
-                                through annual festivals and customary governance.
-
-                            </p>
-
-                        </div>
-
-
-                        <div
-                            class="z-10 bg-primary w-6 h-6 rounded-full border-4 border-background absolute left-1/2 transform -translate-x-1/2 hidden md:block">
-                        </div>
-
-
-                        <div
-                            class="md:w-1/2 md:pl-20 order-1 md:order-2 mb-8 md:mb-0">
-
-                            <div
-                                class="w-full aspect-video bg-cover bg-center shadow-2xl border-2 border-primary-container"
-                                data-alt="A wide-angle professional photograph of a colorful modern-day festival in Mankessim.">
-
-                            </div>
-
-                        </div>
+                        <img
+                            src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg"
+                            alt="Modern Mankessim festival and traditional gathering"
+                            class="w-full aspect-video object-cover">
 
                     </div>
 
                 </div>
 
+
+                <!-- Timeline Dot -->
+                <div class="hidden md:flex absolute left-1/2 top-1/2
+                            -translate-x-1/2 -translate-y-1/2
+                            w-8 h-8 rounded-full
+                            bg-[#755b00]
+                            border-8 border-[#FFF3DB]
+                            shadow-lg">
+                </div>
+
             </div>
 
-        </section>
+        </div>
 
+    </div>
+
+</section>
 
         <!-- =================================================
              TRADITIONAL COUNCIL
